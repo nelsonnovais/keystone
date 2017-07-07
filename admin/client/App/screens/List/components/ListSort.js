@@ -101,7 +101,7 @@ var ListSort = React.createClass({
 			<span>
 				{activeSortPath && (
 					<span>
-						<span style={{ color: '#999' }}> sorted by </span>
+						<span style={{ color: '#999' }}> disposto(s) por </span>
 						<a id="listHeaderSortButton" href="javascript:;" onClick={this.openPopout}>
 							{activeSortPath.label.toLowerCase()}
 							{activeSortPath.invert ? ' (descending)' : ''}
@@ -127,7 +127,7 @@ var ListSort = React.createClass({
 					</Popout.Body>
 
 					<Popout.Footer>
-						<FormNote>Hold <Kbd>alt</Kbd> to toggle ascending/descending</FormNote>
+						<FormNote>Prima<Kbd>alt</Kbd> para inverter asc/desc</FormNote>
 					</Popout.Footer>
 				</Popout>
 			</span>
