@@ -21,7 +21,8 @@ var ListTile = React.createClass({
 			'User': 'Utilizador',
 			'Post Categories': 'Categorias',
 			'Enquiries': 'Requrimentos',
-			'Post': 'Post',
+			'Posts': 'Posts',
+			'Users': 'Utilizadores',
 		};
 		return (
 			<div className="dashboard-group__list" {...opts}>
