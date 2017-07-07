@@ -20,7 +20,7 @@ var ListTile = React.createClass({
 		const lookUpTable = {
 			'User': 'Utilizador',
 			'Post Categories': 'Categorias',
-			'Enquiries': 'Requrimentos',
+			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
 		};

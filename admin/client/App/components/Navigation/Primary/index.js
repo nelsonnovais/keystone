@@ -94,12 +94,18 @@ var PrimaryNavigation = React.createClass({
 			const href = section.lists[0].external ? section.lists[0].path : `${Keystone.adminPath}/${section.lists[0].path}`;
 			const isActive = this.props.currentSectionKey && this.props.currentSectionKey === section.key;
 			const className = isActive ? 'primary-navbar__item--active' : null;
-			console.log('This label: ' + section.label);
+			const lookUpTable = {
+				'User': 'Utilizador',
+				'Post Categories': 'Categorias',
+				'Enquiries': 'Requerimentos',
+				'Posts': 'Posts',
+				'Users': 'Utilizadores',
+			};
 			return (
 				<PrimaryNavItem
 					active={isActive}
 					key={section.key}
-					label={section.label}
+					label={lookUpTable[section.label]}
 					className={className}
 					to={href}
 				>
