@@ -9,13 +9,19 @@ import { Link } from 'react-router';
 
 const PrimaryNavItem = ({ children, className, href, label, title, to, active }) => {
 	const itemClassName = classnames('primary-navbar__item', className);
-
+	const lookUpTable = {
+		'User': 'Utilizador',
+		'Post Categories': 'Categorias',
+		'Enquiries': 'Requrimentos',
+		'Posts': 'Posts',
+		'Users': 'Utilizadores',
+	};
 	const Button = to ? (
 		<Link
 			className="primary-navbar__link"
-			key={title}
+			key={lookUpTable[title]}
 			tabIndex="-1"
-			title={title}
+			title={lookUpTable[title]}
 			to={to}
 			// Block clicks on active link
 			onClick={(evt) => { if (active) evt.preventDefault(); }}
@@ -26,9 +32,9 @@ const PrimaryNavItem = ({ children, className, href, label, title, to, active })
 		<a
 			className="primary-navbar__link"
 			href={href}
-			key={title}
+			key={lookUpTable[title]}
 			tabIndex="-1"
-			title={title}
+			title={lookUpTable[title]}
 		>
 			{children}
 		</a>
