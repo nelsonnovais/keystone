@@ -105,11 +105,11 @@ var PrimaryNavigation = React.createClass({
 				<PrimaryNavItem
 					active={isActive}
 					key={section.key}
-					label={lookUpTable[section.label]}
+					label={section.label}
 					className={className}
 					to={href}
 				>
-					{section.label}
+					{lookUpTable[section.label]}
 				</PrimaryNavItem>
 			);
 		});
