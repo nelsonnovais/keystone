@@ -45,7 +45,7 @@ const PrimaryNavItem = ({ children, className, href, label, title, to, active })
 	return (
 		<li
 			className={itemClassName}
-			data-section-label={lookUpTable[label]}
+			data-section-label={label}
 		>
 			{Button}
 		</li>

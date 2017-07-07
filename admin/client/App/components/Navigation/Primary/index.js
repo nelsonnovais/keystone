@@ -96,6 +96,7 @@ var PrimaryNavigation = React.createClass({
 			const className = isActive ? 'primary-navbar__item--active' : null;
 
 			return (
+				console.log("This label: " + section.label)
 				<PrimaryNavItem
 					active={isActive}
 					key={section.key}

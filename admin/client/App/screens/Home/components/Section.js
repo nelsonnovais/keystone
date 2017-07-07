@@ -6,7 +6,7 @@ class Section extends React.Component {
 		const lookUpTable = {
 			'User': 'Utilizador',
 			'Post Categories': 'Categorias',
-			'Enquiries': 'Requrimentos',
+			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
 		};
