@@ -7,21 +7,23 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router';
 
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Post Categories': 'Categorias',
+	'Enquiries': 'Requrimentos',
+	'Posts': 'Posts',
+	'Users': 'Utilizadores',
+};
+
 const PrimaryNavItem = ({ children, className, href, label, title, to, active }) => {
 	const itemClassName = classnames('primary-navbar__item', className);
-	const lookUpTable = {
-		'User': 'Utilizador',
-		'Post Categories': 'Categorias',
-		'Enquiries': 'Requrimentos',
-		'Posts': 'Posts',
-		'Users': 'Utilizadores',
-	};
+
 	const Button = to ? (
 		<Link
 			className="primary-navbar__link"
-			key={lookUpTable[title]}
+			key={title}
 			tabIndex="-1"
-			title={lookUpTable[title]}
+			title={title}
 			to={to}
 			// Block clicks on active link
 			onClick={(evt) => { if (active) evt.preventDefault(); }}
@@ -32,9 +34,9 @@ const PrimaryNavItem = ({ children, className, href, label, title, to, active })
 		<a
 			className="primary-navbar__link"
 			href={href}
-			key={lookUpTable[title]}
+			key={title}
 			tabIndex="-1"
-			title={lookUpTable[title]}
+			title={title}
 		>
 			{children}
 		</a>
@@ -43,7 +45,7 @@ const PrimaryNavItem = ({ children, className, href, label, title, to, active })
 	return (
 		<li
 			className={itemClassName}
-			data-section-label={label}
+			data-section-label={lookUpTable[label]}
 		>
 			{Button}
 		</li>
