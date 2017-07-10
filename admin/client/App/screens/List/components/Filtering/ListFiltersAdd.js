@@ -112,7 +112,7 @@ var ListFiltersAdd = React.createClass({
 					<div style={formFieldStyles}>
 						<FormInput
 							onChange={this.updateSearch}
-							placeholder="Find a filter..."
+							placeholder="Selecionar Filtro..."
 							ref="search"
 							value={this.state.searchString}
 						/>
@@ -153,7 +153,7 @@ var ListFiltersAdd = React.createClass({
 					active={isOpen}
 					glyph="eye"
 					id="listHeaderFilterButton"
-					label="Filter"
+					label="Filtrar"
 					onClick={isOpen ? this.closePopout : this.openPopout}
 				/>
 				<Popout isOpen={isOpen} onCancel={this.closePopout} relativeToID="listHeaderFilterButton">
