@@ -115,6 +115,7 @@ var ListFiltersAdd = React.createClass({
 		};
 
 		return (
+			console.log('Popup Pane labels: ' + this.state.searchString);
 			<Popout.Pane onLayout={this.setPopoutHeight} key="list">
 				<Popout.Body>
 					<div style={formFieldStyles}>
@@ -132,6 +133,7 @@ var ListFiltersAdd = React.createClass({
 	},
 	renderForm () {
 		return (
+
 			<Popout.Pane onLayout={this.setPopoutHeight} key="form">
 				<ListFiltersAddForm
 					activeFilters={this.props.activeFilters}
@@ -156,6 +158,7 @@ var ListFiltersAdd = React.createClass({
 		});
 
 		return (
+			console.log('Header Button: ' + {selectedField ? this.renderForm() : this.renderList()});
 			<div>
 				<ListHeaderButton
 					active={isOpen}
