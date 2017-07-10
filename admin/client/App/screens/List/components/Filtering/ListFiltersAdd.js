@@ -88,7 +88,7 @@ var ListFiltersAdd = React.createClass({
 			}
 
 			const filterIsActive = activeFilterPaths.length && (activeFilterPaths.indexOf(el.field.path) > -1);
-
+			console.log('this label' + el.field.label);
 			return (
 				<PopoutList.Item
 					key={'item_' + el.field.path}
