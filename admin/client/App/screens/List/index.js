@@ -497,7 +497,7 @@ const ListView = React.createClass({
 		if (this.props.active.filters.length) {
 			matching += (matching ? ' and ' : '') + pluralize(this.props.active.filters.length, '* filter', '* filters');
 		}
-		matching = matching ? ' coincidente com ' + matching : '.';
+		matching = matching ? ' coincidente com' + matching : '.';
 		return (
 			<BlankState style={{ marginTop: 20, marginBottom: 20 }}>
 				<Glyph
@@ -506,7 +506,7 @@ const ListView = React.createClass({
 					style={{ marginBottom: 20 }}
 				/>
 				<h2 style={{ color: 'inherit' }}>
-					Nenhum post encontrado {this.props.currentList.plural.toLowerCase()}{matching}
+					Nenhum post encontrado
 				</h2>
 			</BlankState>
 		);
