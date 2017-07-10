@@ -88,14 +88,22 @@ var ListFiltersAdd = React.createClass({
 			}
 
 			const filterIsActive = activeFilterPaths.length && (activeFilterPaths.indexOf(el.field.path) > -1);
-			console.log('this label' + el.field.label);
+			const lookUpTable = {
+				'Title': 'Titulo',
+				'Author': 'Autor',
+				'State': 'Estado',
+				'Published Date': 'Data de Publicação',
+				'Content Extended': 'Artigo Completo',
+				'Content Brief': 'Introdução',
+				'Categories': 'Categorias',
+			};
 			return (
 				<PopoutList.Item
 					key={'item_' + el.field.path}
 					icon={filterIsActive ? 'check' : 'chevron-right'}
 					iconHover={filterIsActive ? 'check' : 'chevron-right'}
 					isSelected={!!filterIsActive}
-					label={el.field.label}
+					label={lookUpTable[el.field.label]}
 					onClick={() => { this.selectField(el.field); }} />
 			);
 		});
