@@ -16,6 +16,13 @@ const SecondaryNavItem = React.createClass({
 		title: React.PropTypes.string,
 	},
 	render () {
+		const lookUpTable = {
+			'User': 'Utilizador',
+			'Post Categories': 'Categorias',
+			'Enquiries': 'Requerimentos',
+			'Posts': 'Posts',
+			'Users': 'Utilizadores',
+		};
 		return (
 			<li className={this.props.className} data-list-path={this.props.path}>
 				<Link
@@ -24,7 +31,7 @@ const SecondaryNavItem = React.createClass({
 					title={this.props.title}
 					tabIndex="-1"
 				>
-					{this.props.children}
+					{lookUpTable[this.props.children]}
 				</Link>
 			</li>
 		);
