@@ -158,8 +158,8 @@ var ListFiltersAdd = React.createClass({
 			'Popout__scrollable-area': !selectedField,
 		});
 
+		console.log('Header Button: ' + selectedField ? this.renderForm() : this.renderList());
 		return (
-			console.log('Header Button: ' + selectedField ? this.renderForm() : this.renderList());
 			<div>
 				<ListHeaderButton
 					active={isOpen}
