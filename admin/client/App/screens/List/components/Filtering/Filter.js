@@ -49,11 +49,19 @@ class Filter extends Component {
 		const { filter } = this.props;
 		const filterId = `activeFilter__${filter.field.path}`;
 		const FilterComponent = Filters[filter.field.type];
-
+		const lookUpTable = {
+			'Title': 'Titulo',
+			'Author': 'Autor',
+			'State': 'Estado',
+			'Published Date': 'Data de Publicação',
+			'Content Extended': 'Artigo Completo',
+			'Content Brief': 'Introdução',
+			'Categories': 'Categorias',
+		};
 		return (
 			<span>
 				<Chip
-					label={getFilterLabel(filter.field, filter.value)}
+					label={lookUpTable[getFilterLabel(filter.field, filter.value)]}
 					onClick={this.open}
 					onClear={this.removeFilter}
 					color="primary"
@@ -72,9 +80,9 @@ class Filter extends Component {
 						<Popout.Footer
 							ref="footer"
 							primaryButtonIsSubmit
-							primaryButtonLabel="Apply"
+							primaryButtonLabel="Aplicar"
 							secondaryButtonAction={this.close}
-							secondaryButtonLabel="Cancel" />
+							secondaryButtonLabel="Cancelar " />
 					</form>
 				</Popout>
 			</span>
