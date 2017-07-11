@@ -68,14 +68,22 @@ var ListColumnsForm = React.createClass({
 
 			const path = el.field.path;
 			const selected = this.state.selectedColumns[path];
-
+			const lookUpTable = {
+				'Title': 'Titulo',
+				'Author': 'Autor',
+				'State': 'Estado',
+				'Published Date': 'Data de Publicação',
+				'Content Extended': 'Artigo Completo',
+				'Content Brief': 'Introdução',
+				'Categories': 'Categorias',
+			};
 			return (
 				<PopoutList.Item
 					key={'column_' + el.field.path}
 					icon={selected ? 'check' : 'dash'}
 					iconHover={selected ? 'dash' : 'check'}
 					isSelected={!!selected}
-					label={el.field.label}
+					label={lookUpTable[el.field.label]}
 					onClick={() => { this.toggleColumn(path, !selected); }} />
 			);
 		});

@@ -114,7 +114,6 @@ var ListFiltersAdd = React.createClass({
 			paddingBottom: '1em',
 		};
 
-		console.log('Popup Pane labels: ' + this.state.searchString);
 		return (
 
 			<Popout.Pane onLayout={this.setPopoutHeight} key="list">
@@ -158,7 +157,6 @@ var ListFiltersAdd = React.createClass({
 			'Popout__scrollable-area': !selectedField,
 		});
 
-		console.log('Header Button: ' + selectedField ? this.renderForm() : this.renderList());
 		return (
 			<div>
 				<ListHeaderButton
