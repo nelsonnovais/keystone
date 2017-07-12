@@ -102,7 +102,6 @@ var UpdateForm = React.createClass({
 		const itemCount = plural(itemIds, ('* ' + list.singular), ('* ' + list.plural));
 		const formAction = `${Keystone.adminPath}/${list.path}`;
 
-		console.log('This label in UpdateForm: ' + this.state.Fields());
 		return (
 			<Form layout="horizontal" action={formAction} noValidate="true">
 				<Modal.Header

@@ -57,6 +57,9 @@ class Filter extends Component {
 			'Content Extended': 'Artigo Completo',
 			'Content Brief': 'Introdução',
 			'Categories': 'Categorias',
+			'Name': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlegios de Administrador',
 		};
 		console.log('this label' + getFilterLabel(filter.field, filter.value));
 		return (
