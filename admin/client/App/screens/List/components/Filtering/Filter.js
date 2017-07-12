@@ -58,6 +58,7 @@ class Filter extends Component {
 			'Content Brief': 'Introdução',
 			'Categories': 'Categorias',
 		};
+		console.log('this label' + getFilterLabel(filter.field, filter.value));
 		return (
 			<span>
 				<Chip
