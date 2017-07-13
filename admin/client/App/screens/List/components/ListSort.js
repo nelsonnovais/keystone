@@ -110,7 +110,7 @@ var ListSort = React.createClass({
 		// TODO: Handle multiple sort paths
 		const activeSortPath = this.props.activeSort.paths[0];
 		const formFieldStyles = { borderBottom: '1px dashed rgba(0,0,0,0.1)', paddingBottom: '1em' };
-		console.log('this label ' + this.renderSortOptions())
+		console.log('this label ' + activeSortPath.label.toLowerCase());
 		return (
 			<span>
 				{activeSortPath && (
