@@ -16,9 +16,10 @@ function ListHeaderTitle ({
 		'Post Categories': 'Categorias',
 		'Posts': 'Posts',
 	};
+	console.log('this header ' + title);
 	return (
 		<h2 className={css(classes.heading)} {...props}>
-			{lookUpTable[title]}
+			{title}
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}
