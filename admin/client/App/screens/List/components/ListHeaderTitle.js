@@ -11,10 +11,14 @@ function ListHeaderTitle ({
 	title,
 	...props
 }) {
-
+	const lookUpTable = {
+		'Post': 'Post',
+		'Post Categories': 'Categorias',
+		'Posts': 'Posts',
+	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
-			{title} Hello
+			{lookUpTable[title]}
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}
