@@ -110,14 +110,27 @@ var ListSort = React.createClass({
 		// TODO: Handle multiple sort paths
 		const activeSortPath = this.props.activeSort.paths[0];
 		const formFieldStyles = { borderBottom: '1px dashed rgba(0,0,0,0.1)', paddingBottom: '1em' };
-		console.log('this label ' + activeSortPath.label.toLowerCase());
+		const lookUpTable = {
+			'Title': 'Titulo',
+			'Author': 'Autor',
+			'State': 'Estado',
+			'Image': 'Imagem',
+			'Published Date': 'Data de Publicação',
+			'Content Extended': 'Artigo Completo',
+			'Content Brief': 'Introdução',
+			'Categories': 'Categorias',
+			'Name': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlégios de Administrador',
+			'Password': 'Password',
+		};
 		return (
 			<span>
 				{activeSortPath && (
 					<span>
 						<span style={{ color: '#999' }}> disposto(s) por </span>
 						<a id="listHeaderSortButton" href="javascript:;" onClick={this.openPopout}>
-							{activeSortPath.label.toLowerCase()}
+							{lookUpTable[activeSortPath.label].toLowerCase()}
 							{activeSortPath.invert ? ' (descendente)' : ''}
 							<span className="disclosure-arrow" />
 						</a>
