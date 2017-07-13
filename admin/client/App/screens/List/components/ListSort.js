@@ -72,7 +72,7 @@ var ListSort = React.createClass({
 
 		return filteredColumns.map((el, i) => {
 			if (el.type === 'heading') {
-				return <PopoutList.Heading key={'heading_' + i}>{el.content}</PopoutList.Heading>;
+				return <PopoutList.Heading key={'heading_' + i}>{el.content}+1</PopoutList.Heading>;
 			}
 
 			const path = el.field.path;
