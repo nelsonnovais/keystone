@@ -9,6 +9,7 @@ class Section extends React.Component {
 			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
+			'Image': 'Imagem',
 			'Name': 'Nome',
 			'Email': 'Email',
 			'Can access Keystone': 'Previlégios de Administrador',

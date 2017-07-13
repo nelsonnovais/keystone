@@ -21,6 +21,7 @@ var ListTile = React.createClass({
 			'User': 'Utilizador',
 			'Post Categories': 'Categorias',
 			'Enquiries': 'Requerimentos',
+			'Image': 'Imagem',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
 			'Name': 'Nome',

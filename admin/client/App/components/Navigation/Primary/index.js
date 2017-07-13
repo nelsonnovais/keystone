@@ -97,6 +97,7 @@ var PrimaryNavigation = React.createClass({
 			const lookUpTable = {
 				'User': 'Utilizador',
 				'Post Categories': 'Categorias',
+				'Image': 'Imagem',
 				'Enquiries': 'Requerimentos',
 				'Posts': 'Posts',
 				'Users': 'Utilizadores',

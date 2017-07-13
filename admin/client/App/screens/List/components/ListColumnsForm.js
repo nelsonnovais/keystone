@@ -72,6 +72,7 @@ var ListColumnsForm = React.createClass({
 				'Title': 'Titulo',
 				'Author': 'Autor',
 				'State': 'Estado',
+				'Image': 'Imagem',
 				'Published Date': 'Data de Publicação',
 				'Content Extended': 'Artigo Completo',
 				'Content Brief': 'Introdução',

@@ -18,6 +18,7 @@ const SecondaryNavItem = React.createClass({
 	render () {
 		const lookUpTable = {
 			'User': 'Utilizador',
+			'Image': 'Imagem',
 			'Post Categories': 'Categorias',
 			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
