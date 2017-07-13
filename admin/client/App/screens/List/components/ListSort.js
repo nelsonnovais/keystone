@@ -72,7 +72,7 @@ var ListSort = React.createClass({
 
 		return filteredColumns.map((el, i) => {
 			if (el.type === 'heading') {
-				return <PopoutList.Heading key={'heading_' + i}>{el.content}+1</PopoutList.Heading>;
+				return <PopoutList.Heading key={'heading_' + i}>{el.content}</PopoutList.Heading>;
 			}
 
 			const path = el.field.path;
@@ -80,7 +80,7 @@ var ListSort = React.createClass({
 			const isInverted = isSelected && activeSortPath.invert;
 			const icon = this.state.altDown || (isSelected && !isInverted) ? 'chevron-up' : 'chevron-down';
 			const lookUpTable = {
-				'Title': 'Titulo',
+				'Title': 'Título',
 				'Author': 'Autor',
 				'State': 'Estado',
 				'Image': 'Imagem',
@@ -111,7 +111,7 @@ var ListSort = React.createClass({
 		const activeSortPath = this.props.activeSort.paths[0];
 		const formFieldStyles = { borderBottom: '1px dashed rgba(0,0,0,0.1)', paddingBottom: '1em' };
 		const lookUpTable = {
-			'Title': 'Titulo',
+			'Title': 'Título',
 			'Author': 'Autor',
 			'State': 'Estado',
 			'Image': 'Imagem',

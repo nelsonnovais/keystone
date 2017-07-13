@@ -36,7 +36,7 @@ function ListManagement ({
 				onClick={handleDelete}
 				position="left"
 				variant="link">
-				Delete
+				Eliminar
 			</GlyphButton>
 		</Section>
 	);
@@ -67,7 +67,7 @@ function ListManagement ({
 					</Button>
 				</Section>
 				<Section>
-					<Button active={noneButtonIsActive} onClick={() => handleSelect('none')} title="Deselect all rows">None</Button>
+					<Button active={noneButtonIsActive} onClick={() => handleSelect('none')} title="Deselect all rows">Nenhum</Button>
 				</Section>
 			</Group>
 		</Section>
@@ -88,7 +88,7 @@ function ListManagement ({
 			<Group style={{ float: 'left', marginRight: '.75em', marginBottom: 0 }}>
 				<Section>
 					<Button active={isOpen} onClick={() => handleToggle(!isOpen)}>
-						Manage
+						Gerir
 					</Button>
 				</Section>
 				{selectButtons}

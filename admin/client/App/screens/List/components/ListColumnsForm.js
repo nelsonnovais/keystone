@@ -69,7 +69,7 @@ var ListColumnsForm = React.createClass({
 			const path = el.field.path;
 			const selected = this.state.selectedColumns[path];
 			const lookUpTable = {
-				'Title': 'Titulo',
+				'Title': 'Título',
 				'Author': 'Autor',
 				'State': 'Estado',
 				'Image': 'Imagem',

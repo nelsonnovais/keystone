@@ -50,7 +50,7 @@ class Filter extends Component {
 		const filterId = `activeFilter__${filter.field.path}`;
 		const FilterComponent = Filters[filter.field.type];
 		const lookUpTable = {
-			'Title': 'Titulo',
+			'Title': 'Título',
 			'Author': 'Autor',
 			'State': 'Estado',
 			'Image': 'Imagem',

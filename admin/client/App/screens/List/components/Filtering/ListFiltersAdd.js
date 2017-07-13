@@ -89,7 +89,7 @@ var ListFiltersAdd = React.createClass({
 
 			const filterIsActive = activeFilterPaths.length && (activeFilterPaths.indexOf(el.field.path) > -1);
 			const lookUpTable = {
-				'Title': 'Titulo',
+				'Title': 'Título',
 				'Author': 'Autor',
 				'State': 'Estado',
 				'Image': 'Imagem',
