@@ -62,7 +62,7 @@ function ListManagement ({
 				{selectAllButton}
 				<Section>
 					<Button active={pageVisibleButtonIsActive} onClick={() => handleSelect('visible')} title="Select all rows">
-						{itemCount > itemsPerPage ? 'Page ' : 'All '}
+						{itemCount > itemsPerPage ? 'Page ' : 'Todos '}
 						<small style={buttonNoteStyles}>({itemCount > itemsPerPage ? itemsPerPage : itemCount})</small>
 					</Button>
 				</Section>
@@ -77,7 +77,7 @@ function ListManagement ({
 	const selectedCountText = isOpen ? (
 		<Section>
 			<span style={{ color: '#666', display: 'inline-block', lineHeight: '2.4em', margin: 1 }}>
-				{checkedItemCount} selected
+				{checkedItemCount} selecionado(s)
 			</span>
 		</Section>
 	) : null;
