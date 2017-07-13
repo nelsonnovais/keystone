@@ -61,6 +61,7 @@ class Filter extends Component {
 			'Name': 'Nome',
 			'Email': 'Email',
 			'Can access Keystone': 'Previlegios de Administrador',
+			'Password': 'Password',
 		};
 
 		return (
