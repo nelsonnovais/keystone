@@ -22,6 +22,9 @@ const SecondaryNavItem = React.createClass({
 			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
+			'Name': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlégios de Administrador',
 		};
 		return (
 			<li className={this.props.className} data-list-path={this.props.path}>

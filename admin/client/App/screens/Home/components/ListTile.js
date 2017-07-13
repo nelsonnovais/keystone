@@ -23,6 +23,9 @@ var ListTile = React.createClass({
 			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
+			'Name': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlégios de Administrador',
 		};
 		return (
 			<div className="dashboard-group__list" {...opts}>

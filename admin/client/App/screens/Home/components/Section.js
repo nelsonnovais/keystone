@@ -9,6 +9,9 @@ class Section extends React.Component {
 			'Enquiries': 'Requerimentos',
 			'Posts': 'Posts',
 			'Users': 'Utilizadores',
+			'Name': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlégios de Administrador',
 		};
 		const iconClass = this.props.icon || getRelatedIconClass(this.props.id);
 		return (

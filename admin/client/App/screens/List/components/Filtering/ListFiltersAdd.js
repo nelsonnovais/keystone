@@ -96,6 +96,9 @@ var ListFiltersAdd = React.createClass({
 				'Content Extended': 'Artigo Completo',
 				'Content Brief': 'Introdução',
 				'Categories': 'Categorias',
+				'Name': 'Nome',
+				'Email': 'Email',
+				'Can access Keystone': 'Previlégios de Administrador',
 			};
 			return (
 				<PopoutList.Item

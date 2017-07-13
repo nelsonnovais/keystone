@@ -100,6 +100,9 @@ var PrimaryNavigation = React.createClass({
 				'Enquiries': 'Requerimentos',
 				'Posts': 'Posts',
 				'Users': 'Utilizadores',
+				'Name:': 'Nome',
+				'Email': 'Email',
+				'Can access Keystone': 'Previlegios de Administrador',
 			};
 			return (
 				<PrimaryNavItem
