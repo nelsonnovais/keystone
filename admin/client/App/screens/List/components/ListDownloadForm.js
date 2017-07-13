@@ -110,7 +110,6 @@ var ListDownloadForm = React.createClass({
 
 			const columnKey = el.field.path;
 			const columnValue = this.state.selectedColumns[columnKey];
-			console.log('Download label ' + el.field.label);
 
 			return (
 				<PopoutList.Item
@@ -167,7 +166,7 @@ var ListDownloadForm = React.createClass({
 									value={this.state.format}
 								/>
 							</FormField>
-							<FormField label="Columns:" style={{ marginBottom: 0 }}>
+							<FormField label="Colunas:" style={{ marginBottom: 0 }}>
 								<LabelledControl
 									autoFocus
 									checked={useCurrentColumns}

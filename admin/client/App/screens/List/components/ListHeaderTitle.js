@@ -14,7 +14,7 @@ function ListHeaderTitle ({
 
 	return (
 		<h2 className={css(classes.heading)} {...props}>
-			{title}
+			{title} +1
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}

@@ -19,7 +19,7 @@ function ListHeaderSearch ({
 				data-search-input-field
 				onChange={handleChange}
 				onKeyUp={handleKeyup}
-				placeholder="Procura"
+				placeholder="Procurar"
 				value={value}
 			/>
 			<button
