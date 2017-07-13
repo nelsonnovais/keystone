@@ -110,7 +110,7 @@ var ListSort = React.createClass({
 		// TODO: Handle multiple sort paths
 		const activeSortPath = this.props.activeSort.paths[0];
 		const formFieldStyles = { borderBottom: '1px dashed rgba(0,0,0,0.1)', paddingBottom: '1em' };
-
+		console.log('this label ' + this.renderSortOptions())
 		return (
 			<span>
 				{activeSortPath && (
@@ -118,13 +118,13 @@ var ListSort = React.createClass({
 						<span style={{ color: '#999' }}> disposto(s) por </span>
 						<a id="listHeaderSortButton" href="javascript:;" onClick={this.openPopout}>
 							{activeSortPath.label.toLowerCase()}
-							{activeSortPath.invert ? ' (descending)' : ''}
+							{activeSortPath.invert ? ' (descendente)' : ''}
 							<span className="disclosure-arrow" />
 						</a>
 					</span>
 				)}
 				<Popout isOpen={this.state.popoutIsOpen} onCancel={this.closePopout} relativeToID="listHeaderSortButton">
-					<Popout.Header title="Sort" />
+					<Popout.Header title="Disposição" />
 
 					<Popout.Body scrollable>
 						<FormField style={formFieldStyles}>
@@ -132,11 +132,11 @@ var ListSort = React.createClass({
 								autoFocus
 								value={this.state.searchString}
 								onChange={this.updateSearch}
-								placeholder="Find a field..."
+								placeholder="Filtre por..."
 							/>
 						</FormField>
 						<PopoutList>
-							{this.renderSortOptions()}
+							{this.renderSortOptions()} +1
 						</PopoutList>
 					</Popout.Body>
 
