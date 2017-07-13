@@ -109,13 +109,13 @@ var ListColumnsForm = React.createClass({
 					onClick={() => this.togglePopout(!this.state.isOpen)}
 				/>
 				<Popout isOpen={this.state.isOpen} onCancel={() => this.togglePopout(false)} relativeToID="listHeaderColumnButton">
-					<Popout.Header title="Columns" />
+					<Popout.Header title="Colunas" />
 					<Popout.Body scrollable>
 						<div style={formFieldStyles}>
 							<FormInput
 								autoFocus
 								onChange={this.updateSearch}
-								placeholder="Find a column..."
+								placeholder="Selecione uma coluna"
 								value={this.state.searchString}
 							/>
 						</div>
@@ -125,9 +125,9 @@ var ListColumnsForm = React.createClass({
 					</Popout.Body>
 					<Popout.Footer
 						primaryButtonAction={this.applyColumns}
-						primaryButtonLabel="Apply"
+						primaryButtonLabel="Aplicar"
 						secondaryButtonAction={() => this.togglePopout(false)}
-						secondaryButtonLabel="Cancel" />
+						secondaryButtonLabel="Cancelar" />
 				</Popout>
 			</div>
 		);

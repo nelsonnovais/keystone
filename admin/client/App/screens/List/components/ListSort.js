@@ -136,7 +136,7 @@ var ListSort = React.createClass({
 							/>
 						</FormField>
 						<PopoutList>
-							{this.renderSortOptions()} +1
+							{this.renderSortOptions()}
 						</PopoutList>
 					</Popout.Body>
 

@@ -75,7 +75,7 @@ class Filter extends Component {
 				/>
 				<Popout isOpen={this.state.isOpen} onCancel={this.close} relativeToID={filterId}>
 					<form onSubmit={this.updateFilter}>
-						<Popout.Header title="Edit Filter" />
+						<Popout.Header title="Selecione Filtro" />
 						<Popout.Body>
 							<FilterComponent
 								field={filter.field}

@@ -110,6 +110,7 @@ var ListDownloadForm = React.createClass({
 
 			const columnKey = el.field.path;
 			const columnValue = this.state.selectedColumns[columnKey];
+			console.log('Download label ' + el.field.label);
 
 			return (
 				<PopoutList.Item
@@ -158,7 +159,7 @@ var ListDownloadForm = React.createClass({
 					<Popout.Header title="Download" />
 					<Popout.Body scrollable>
 						<Form layout="horizontal" labelWidth={100} component="div">
-							<FormField label="File format:">
+							<FormField label="Formato:">
 								<SegmentedControl
 									equalWidthSegments
 									onChange={this.changeFormat}
@@ -170,7 +171,7 @@ var ListDownloadForm = React.createClass({
 								<LabelledControl
 									autoFocus
 									checked={useCurrentColumns}
-									label="Use currently selected"
+									label="Selecionado"
 									onChange={this.toggleCurrentlySelectedColumns}
 									type="checkbox"
 									value
@@ -183,7 +184,7 @@ var ListDownloadForm = React.createClass({
 						primaryButtonAction={this.handleDownloadRequest}
 						primaryButtonLabel="Download"
 						secondaryButtonAction={() => this.togglePopout(false)}
-						secondaryButtonLabel="Cancel" />
+						secondaryButtonLabel="Cancelar" />
 				</Popout>
 			</div>
 		);
