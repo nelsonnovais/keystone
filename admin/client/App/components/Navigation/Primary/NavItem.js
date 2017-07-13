@@ -41,7 +41,6 @@ const PrimaryNavItem = ({ children, className, href, label, title, to, active })
 			{children}
 		</a>
 	);
-	console.log('This Button Label' + label);
 	return (
 		<li
 			className={itemClassName}

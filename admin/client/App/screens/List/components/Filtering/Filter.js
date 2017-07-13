@@ -62,7 +62,7 @@ class Filter extends Component {
 			'Email': 'Email',
 			'Can access Keystone': 'Previlegios de Administrador',
 		};
-		console.log('this label' + getFilterLabel(filter.field, filter.value));
+
 		return (
 			<span>
 				<Chip

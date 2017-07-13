@@ -79,13 +79,26 @@ var ListSort = React.createClass({
 			const isSelected = activeSortPath && activeSortPath.path === path;
 			const isInverted = isSelected && activeSortPath.invert;
 			const icon = this.state.altDown || (isSelected && !isInverted) ? 'chevron-up' : 'chevron-down';
+			const lookUpTable = {
+				'Title': 'Titulo',
+				'Author': 'Autor',
+				'State': 'Estado',
+				'Image': 'Imagem',
+				'Published Date': 'Data de Publicação',
+				'Content Extended': 'Artigo Completo',
+				'Content Brief': 'Introdução',
+				'Categories': 'Categorias',
+				'Name': 'Nome',
+				'Email': 'Email',
+				'Can access Keystone': 'Previlégios de Administrador',
+			};
 
 			return (
 				<PopoutList.Item
 					key={'column_' + el.field.path}
 					icon={icon}
 					isSelected={isSelected}
-					label={el.field.label}
+					label={lookUpTable[el.field.label]}
 					onClick={() => {
 						this.handleSortSelect(path, isSelected && !isInverted);
 					}} />

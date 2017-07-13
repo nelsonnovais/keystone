@@ -11,7 +11,7 @@ function ListHeaderTitle ({
 	title,
 	...props
 }) {
-	console.log('This head title ' + title);
+
 	return (
 		<h2 className={css(classes.heading)} {...props}>
 			{title}
