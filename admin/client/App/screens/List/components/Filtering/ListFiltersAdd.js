@@ -100,6 +100,7 @@ var ListFiltersAdd = React.createClass({
 				'Name': 'Nome',
 				'Email': 'Email',
 				'Can access Keystone': 'Previlégios de Administrador',
+				'Password': 'Password',
 			};
 			return (
 				<PopoutList.Item
