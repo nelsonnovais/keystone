@@ -426,7 +426,7 @@ const ListView = React.createClass({
 						}] }}
 					/>
 				) : null}
-				<BlankState heading={`No ${this.props.currentList.plural.toLowerCase()} found...`} style={{ marginTop: 40 }}>
+				<BlankState heading={`Sem ${this.props.currentList.plural.toLowerCase()} `} style={{ marginTop: 40 }}>
 					{button}
 				</BlankState>
 			</Container>
@@ -458,7 +458,7 @@ const ListView = React.createClass({
 					{(this.props.error) ? (
 						<FlashMessages
 							messages={{ error: [{
-								title: "There is a problem with the network, we're trying to reconnect..",
+								title: "Foi perdida a ligação ao Servidor, no entanto encontramo-nos a resolver o problema ...",
 							}] }}
 						/>
 					) : null}
