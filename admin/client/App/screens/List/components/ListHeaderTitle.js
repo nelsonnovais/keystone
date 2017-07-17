@@ -16,7 +16,7 @@ function ListHeaderTitle ({
 	const field = title.split(' ');
 	console.log('Split: ' + field);
 	const lookUptable = {
-		'Categories': 'Categorias',
+		Categories: 'Categorias',
 	};
 	titulo = field[0] + ' ' + field[1];
 	if (field[2] !== null) {
