@@ -15,13 +15,20 @@ function ListHeaderTitle ({
 	console.log('Title: ' + title);
 	const field = title.split(' ');
 	console.log('Split: ' + field);
-	const lookUptable = {
-		Categories: 'Categorias',
+	const lookUpTable = {
+		'Title': 'Título',
+		'Author': 'Autor',
+		'State': 'Estado',
+		'Image': 'Imagem',
+		'Published Date': 'Data de Publicação',
+		'Content Extended': 'Artigo Completo',
+		'Content Brief': 'Introdução',
+		'Categories': 'Categorias',
 	};
 	titulo = field[0] + ' ' + field[1];
 	if (field[2] !== null) {
-		console.log('entrei');
-		titulo = field[0] + ' ' + lookUptable[field[2]];
+		console.log('entrei' + field[2]);
+		titulo = field[0] + ' ' + lookUpTable[field[2]];
 	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
