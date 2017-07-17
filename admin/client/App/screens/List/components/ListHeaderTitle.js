@@ -16,10 +16,9 @@ function ListHeaderTitle ({
 		'Post Categories': 'Categorias',
 		'Posts': 'Posts',
 	};
-	console.log('this header ' + title);
+	console.log('this header ' + title[1]);
 	return (
 		<h2 className={css(classes.heading)} {...props}>
-			{title}
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}
