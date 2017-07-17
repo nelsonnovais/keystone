@@ -11,7 +11,9 @@ function ListHeaderTitle ({
 	title,
 	...props
 }) {
+	console.log('Title: ' + title);
 	const field = title.split(' ');
+	console.log('Split: ' + field);
 	const lookUptable = {
 		'Post': field[0] + 'Post',
 		'Posts': field[0] + 'Posts',
