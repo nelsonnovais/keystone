@@ -11,17 +11,20 @@ function ListHeaderTitle ({
 	title,
 	...props
 }) {
+	var titulo = '';
 	console.log('Title: ' + title);
 	const field = title.split(' ');
 	console.log('Split: ' + field);
 	const lookUptable = {
-		'Post': field[0] + 'Post',
-		'Posts': field[0] + 'Posts',
-		'Post Categories': field[0] + 'Categorias',
+		'Categories': 'Categorias',
+	};
+	titulo = field[0] + ' ' + field[1];
+	if (field[3]) {
+		titulo = field[0] + ' ' + lookUptable[field[3]];
 	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
-			{lookUptable[field[1]]}
+			{titulo}
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}
