@@ -11,14 +11,15 @@ function ListHeaderTitle ({
 	title,
 	...props
 }) {
-	const lookUpTable = {
-		'Post': 'Post',
-		'Post Categories': 'Categorias',
-		'Posts': 'Posts',
+	const field = title.split(' ');
+	const lookUptable = {
+		'Post': field[0] + 'Post',
+		'Posts': field[0] + 'Posts',
+		'Post Categories': field[0] + 'Categorias',
 	};
-	console.log('this header ' + title[1]);
 	return (
 		<h2 className={css(classes.heading)} {...props}>
+			{lookUptable[field[1]]}
 			<ListSort
 				activeSort={activeSort}
 				availableColumns={availableColumns}
