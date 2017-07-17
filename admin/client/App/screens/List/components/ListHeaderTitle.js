@@ -19,7 +19,7 @@ function ListHeaderTitle ({
 		'Categories': 'Categorias',
 	};
 	titulo = field[0] + ' ' + field[1];
-	if (field[2]) {
+	if (field[2] === 'Categories') {
 		console.log('entrei');
 		titulo = field[0] + ' ' + lookUptable[field[2]];
 	};
