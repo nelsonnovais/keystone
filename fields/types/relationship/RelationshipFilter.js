@@ -184,7 +184,7 @@ var RelationshipFilter = React.createClass({
 					key={`item-${i}-${item.id}`}
 					icon="dash"
 					iconHover={itemIconHover}
-					label={itemLabelPt}
+					label={item.name}
 					onClick={() => {
 						if (selected) this.removeItem(item);
 						else this.selectItem(item);
