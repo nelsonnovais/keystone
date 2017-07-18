@@ -31,6 +31,12 @@ const lookUpTable = {
 	'Email': 'Email',
 	'Can access Keystone': 'Previlegios de Administrador',
 	'Title': 'Título',
+	'Author': 'Autor',
+	'State': 'Estado',
+	'Published Date': 'Data de Publicação',
+	'Content Extended': 'Artigo Completo',
+	'Content Brief': 'Introdução',
+	'Categories': 'Categorias',
 };
 function getDefaultValue () {
 	return {
