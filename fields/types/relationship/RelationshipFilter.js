@@ -175,6 +175,27 @@ var RelationshipFilter = React.createClass({
 	},
 	renderItems (items, selected) {
 		const itemIconHover = selected ? 'x' : 'check';
+		const lookUpTable = {
+			'User': 'Utilizador',
+			'Post Categories': 'Categorias',
+			'Image': 'Imagem',
+			'Enquiries': 'Requerimentos',
+			'Posts': 'Posts',
+			'Users': 'Utilizadores',
+			'Name:': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlegios de Administrador',
+			'Title': 'Título',
+			'Author': 'Autor',
+			'State': 'Estado',
+			'Published Date': 'Data de Publicação',
+			'Content Extended': 'Artigo Completo',
+			'Content Brief': 'Introdução',
+			'Categories': 'Categorias',
+			'Draft': 'Rascunho',
+			'Published': 'Publicado',
+			'Archived': 'Arquivado',
+		};
 
 		return items.map((item, i) => {
 			var itemLabelPt = lookUpTable[item.name];
