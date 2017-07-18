@@ -20,6 +20,17 @@ const MODE_OPTIONS = [
 	{ label: 'Acaba em', value: 'endsWith' },
 ];
 
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Post Categories': 'Categorias',
+	'Image': 'Imagem',
+	'Enquiries': 'Requerimentos',
+	'Posts': 'Posts',
+	'Users': 'Utilizadores',
+	'Name:': 'Nome',
+	'Email': 'Email',
+	'Can access Keystone': 'Previlegios de Administrador',
+};
 function getDefaultValue () {
 	return {
 		mode: MODE_OPTIONS[0].value,
@@ -62,8 +73,7 @@ var TextFilter = React.createClass({
 	render () {
 		const { field, filter } = this.props;
 		const mode = MODE_OPTIONS.filter(i => i.value === filter.mode)[0];
-		console.log('label:' + field.label);
-		const placeholder = field.label + ' ' + mode.label.toLowerCase() + '...';
+		const placeholder = lookUpTable[field.label] + ' ' + mode.label.toLowerCase() + '...';
 
 		return (
 			<div>
