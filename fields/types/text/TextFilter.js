@@ -82,7 +82,7 @@ var TextFilter = React.createClass({
 		const { field, filter } = this.props;
 		const mode = MODE_OPTIONS.filter(i => i.value === filter.mode)[0];
 		const placeholder = lookUpTable[field.label] + ' ' + mode.label.toLowerCase() + '...';
-
+		console.log('this label: ' + field.label);
 		return (
 			<div>
 				<FormField>
