@@ -180,8 +180,11 @@ var RelationshipFilter = React.createClass({
 			var itemLabelPt = item.name;
 			console.log('Relation name: ' + item.name);
 			if (lookUpTable[item.name] !== 'undefined') {
+				console.log('Entrei');
 				itemLabelPt = lookUpTable[item.name];
+				console.log('pt label inside IF statment:' + itemLabelPt);
 			};
+			console.log('pt label outside IF statment:' + itemLabelPt);
 			return (
 				<PopoutList.Item
 					key={`item-${i}-${item.id}`}
