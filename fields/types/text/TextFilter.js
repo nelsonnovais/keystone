@@ -62,6 +62,7 @@ var TextFilter = React.createClass({
 	render () {
 		const { field, filter } = this.props;
 		const mode = MODE_OPTIONS.filter(i => i.value === filter.mode)[0];
+		console.log('label:' + field.label);
 		const placeholder = field.label + ' ' + mode.label.toLowerCase() + '...';
 
 		return (
