@@ -177,6 +177,7 @@ var RelationshipFilter = React.createClass({
 		const itemIconHover = selected ? 'x' : 'check';
 
 		return items.map((item, i) => {
+			console.log(item.name);
 			console.log(lookUpTable[item.name]);
 			return (
 				<PopoutList.Item
