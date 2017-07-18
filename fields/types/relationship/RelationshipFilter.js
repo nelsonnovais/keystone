@@ -182,7 +182,7 @@ var RelationshipFilter = React.createClass({
 					key={`item-${i}-${item.id}`}
 					icon="dash"
 					iconHover={itemIconHover}
-					label={item.name}
+					label={lookUpTable[item.name] !== undefined ? lookUpTable[item.name] : item.name}
 					onClick={() => {
 						if (selected) this.removeItem(item);
 						else this.selectItem(item);
