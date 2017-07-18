@@ -34,6 +34,9 @@ const lookUpTable = {
 	'Content Extended': 'Artigo Completo',
 	'Content Brief': 'Introdução',
 	'Categories': 'Categorias',
+	'Draft': 'Rascunho',
+	'Published': 'Publicado',
+	'Archived': 'Arquivado',
 };
 
 function getDefaultValue () {
@@ -176,7 +179,7 @@ var RelationshipFilter = React.createClass({
 		return items.map((item, i) => {
 			var itemLabelPt = item.name;
 			console.log('Relation name: ' + item.name);
-			if (lookUpTable[item.name] !== null) {
+			if (lookUpTable[item.name] !== 'undefined') {
 				itemLabelPt = lookUpTable[item.name];
 			};
 			return (
@@ -184,7 +187,7 @@ var RelationshipFilter = React.createClass({
 					key={`item-${i}-${item.id}`}
 					icon="dash"
 					iconHover={itemIconHover}
-					label={item.name}
+					label={itemLabelPt}
 					onClick={() => {
 						if (selected) this.removeItem(item);
 						else this.selectItem(item);
