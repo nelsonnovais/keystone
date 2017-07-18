@@ -44,7 +44,7 @@ function getFilterLabel (field, value) {
 
 		// LOCATION
 		case 'location': {
-			const joiner = value.inverted ? 'does NOT match' : 'matches';
+			const joiner = value.inverted ? 'não corresponde' : 'corresponde';
 
 			// Remove undefined values before rendering the template literal
 			const formattedValue = [
@@ -74,8 +74,8 @@ function getFilterLabel (field, value) {
 		// PASSWORD
 		case 'password': {
 			return value.exists
-				? `${label} is set`
-				: `${label} is NOT set`;
+				? `${label} definida`
+				: `${label} não definida`;
 		}
 
 		// RELATIONSHIP

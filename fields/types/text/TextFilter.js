@@ -9,15 +9,15 @@ import {
 } from '../../../admin/client/App/elemental';
 
 const INVERTED_OPTIONS = [
-	{ label: 'Matches', value: false },
-	{ label: 'Does NOT Match', value: true },
+	{ label: 'Corresponde', value: false },
+	{ label: 'Não corresponde', value: true },
 ];
 
 const MODE_OPTIONS = [
-	{ label: 'Contains', value: 'contains' },
-	{ label: 'Exactly', value: 'exactly' },
-	{ label: 'Begins with', value: 'beginsWith' },
-	{ label: 'Ends with', value: 'endsWith' },
+	{ label: 'Contem', value: 'contains' },
+	{ label: 'Exatamente', value: 'exactly' },
+	{ label: 'Começa por', value: 'beginsWith' },
+	{ label: 'Acaba em', value: 'endsWith' },
 ];
 
 function getDefaultValue () {
