@@ -177,11 +177,11 @@ var RelationshipFilter = React.createClass({
 		const itemIconHover = selected ? 'x' : 'check';
 
 		return items.map((item, i) => {
-			var itemLabelPt = item.name;
-			console.log('Relation name: ' + item.name);
-			if (lookUpTable[item.name] !== 'undefined') {
+			var itemLabelPt = lookUpTable[item.name];
+			console.log('Relation name: ' + lookUpTable[item.name]);
+			if (itemLabelPt === 'undefined') {
 				console.log('Entrei');
-				itemLabelPt = lookUpTable[item.name];
+				itemLabelPt = item.name;
 				console.log('pt label inside IF statment:' + itemLabelPt);
 			};
 			console.log('pt label outside IF statment:' + itemLabelPt);
