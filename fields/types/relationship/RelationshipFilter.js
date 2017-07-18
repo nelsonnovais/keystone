@@ -13,9 +13,28 @@ import {
 import PopoutList from '../../../admin/client/App/shared/Popout/PopoutList';
 
 const INVERTED_OPTIONS = [
-	{ label: 'Linked To', value: false },
-	{ label: 'NOT Linked To', value: true },
+	{ label: 'Relacionado com ', value: false },
+	{ label: 'Sem relação a ', value: true },
 ];
+
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Post Categories': 'Categorias',
+	'Image': 'Imagem',
+	'Enquiries': 'Requerimentos',
+	'Posts': 'Posts',
+	'Users': 'Utilizadores',
+	'Name:': 'Nome',
+	'Email': 'Email',
+	'Can access Keystone': 'Previlegios de Administrador',
+	'Title': 'Título',
+	'Author': 'Autor',
+	'State': 'Estado',
+	'Published Date': 'Data de Publicação',
+	'Content Extended': 'Artigo Completo',
+	'Content Brief': 'Introdução',
+	'Categories': 'Categorias',
+};
 
 function getDefaultValue () {
 	return {
@@ -160,7 +179,7 @@ var RelationshipFilter = React.createClass({
 					key={`item-${i}-${item.id}`}
 					icon="dash"
 					iconHover={itemIconHover}
-					label={item.name}
+					label={lookUpTable[item.name]}
 					onClick={() => {
 						if (selected) this.removeItem(item);
 						else this.selectItem(item);
@@ -174,7 +193,7 @@ var RelationshipFilter = React.createClass({
 		const searchResults = this.state.searchResults.filter(i => {
 			return this.props.filter.value.indexOf(i.id) === -1;
 		});
-		const placeholder = this.isLoading() ? 'Loading...' : 'Find a ' + this.props.field.label + '...';
+		const placeholder = this.isLoading() ? 'A carregar...' : 'Encontre a(s) ' + lookUpTable[this.props.field.label] + '...';
 		return (
 			<div ref="container">
 				<FormField>
@@ -185,13 +204,13 @@ var RelationshipFilter = React.createClass({
 				</FormField>
 				{selectedItems.length ? (
 					<PopoutList>
-						<PopoutList.Heading>Selected</PopoutList.Heading>
+						<PopoutList.Heading>Selecionado</PopoutList.Heading>
 						{this.renderItems(selectedItems, true)}
 					</PopoutList>
 				) : null}
 				{searchResults.length ? (
 					<PopoutList>
-						<PopoutList.Heading style={selectedItems.length ? { marginTop: '2em' } : null}>Items</PopoutList.Heading>
+						<PopoutList.Heading style={selectedItems.length ? { marginTop: '2em' } : null}>Restantes Items</PopoutList.Heading>
 						{this.renderItems(searchResults)}
 					</PopoutList>
 				) : null}

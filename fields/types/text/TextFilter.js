@@ -38,6 +38,7 @@ const lookUpTable = {
 	'Content Brief': 'Introdução',
 	'Categories': 'Categorias',
 };
+
 function getDefaultValue () {
 	return {
 		mode: MODE_OPTIONS[0].value,
