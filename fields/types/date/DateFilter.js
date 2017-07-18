@@ -11,15 +11,15 @@ import {
 } from '../../../admin/client/App/elemental';
 
 const INVERTED_OPTIONS = [
-	{ label: 'Matches', value: false },
-	{ label: 'Does NOT Match', value: true },
+	{ label: 'Corresponde', value: false },
+	{ label: 'Não corresponde', value: true },
 ];
 
 const MODE_OPTIONS = [
-	{ label: 'On', value: 'on' },
-	{ label: 'After', value: 'after' },
-	{ label: 'Before', value: 'before' },
-	{ label: 'Between', value: 'between' },
+	{ label: 'Em', value: 'on' },
+	{ label: 'Depois', value: 'after' },
+	{ label: 'Antes', value: 'before' },
+	{ label: 'Entre', value: 'between' },
 ];
 
 const DayPickerIndicator = ({ activeInputField }) => {

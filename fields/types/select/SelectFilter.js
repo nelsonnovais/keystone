@@ -11,8 +11,8 @@ import Kbd from '../../../admin/client/App/shared/Kbd';
 import bindFunctions from '../../utils/bindFunctions';
 
 const INVERTED_OPTIONS = [
-	{ label: 'Matches', value: false },
-	{ label: 'Does NOT Match', value: true },
+	{ label: 'Corresponde', value: false },
+	{ label: 'Não corresponde', value: true },
 ];
 
 function getDefaultValue () {

@@ -9,8 +9,8 @@ import {
 } from '../../../admin/client/App/elemental';
 
 const INVERTED_OPTIONS = [
-	{ label: 'Matches', value: false },
-	{ label: 'Does NOT Match', value: true },
+	{ label: 'Corresponde', value: false },
+	{ label: 'Não Corresponde', value: true },
 ];
 
 function getDefaultValue () {
