@@ -30,6 +30,7 @@ const lookUpTable = {
 	'Name:': 'Nome',
 	'Email': 'Email',
 	'Can access Keystone': 'Previlegios de Administrador',
+	'Title': 'Título',
 };
 function getDefaultValue () {
 	return {
