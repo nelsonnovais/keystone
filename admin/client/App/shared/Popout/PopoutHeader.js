@@ -4,7 +4,21 @@
 
 import React from 'react';
 import Transition from 'react-addons-css-transition-group';
-
+const lookUpTable = {
+	'Title': 'Título',
+	'State': 'Estado',
+	'Author': 'Autor',
+	'Published Date': 'Data de Publicação',
+	'Name': 'Nome',
+	'Image': 'Imagem',
+	'Content Brief': 'Introdução',
+	'Content Extended': 'Artigo Completo',
+	'Categories': 'Categorias',
+	'Email': 'Email',
+	'Password': 'Password',
+	'Can access Keystone': 'Previlégios de Administrador',
+	'Filter': 'Filtro',
+};
 const PopoutHeader = React.createClass({
 	displayName: 'PopoutHeader',
 	propTypes: {
@@ -24,13 +38,12 @@ const PopoutHeader = React.createClass({
 			/>
 		) : null;
 		// If we have a title, render it
-		console.log('this header:' + this.props.title);
 		var headerTitle = this.props.title ? (
 			<span
 				key={'title_' + this.props.transitionDirection}
 				className="Popout__header__label"
 			>
-				{this.props.title}
+				{lookUpTable[this.props.title] !== undefined ? lookUpTable[this.props.title] : this.props.title}
 			</span>
 		) : null;
 
