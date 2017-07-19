@@ -18,6 +18,8 @@ const lookUpTable = {
 	'Password': 'Password',
 	'Can access Keystone': 'Previlégios de Administrador',
 	'Filter': 'Filtro',
+	'Columns': 'Colunas',
+	'Download': 'Download',
 };
 const PopoutHeader = React.createClass({
 	displayName: 'PopoutHeader',
@@ -38,7 +40,9 @@ const PopoutHeader = React.createClass({
 			/>
 		) : null;
 		// If we have a title, render it
+		console.log(lookUpTable[this.props.title]);
 		var headerTitle = this.props.title ? (
+
 			<span
 				key={'title_' + this.props.transitionDirection}
 				className="Popout__header__label"
