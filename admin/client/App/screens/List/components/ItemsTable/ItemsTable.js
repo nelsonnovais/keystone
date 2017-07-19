@@ -6,7 +6,7 @@ import DragDrop from './ItemsTableDragDrop';
 
 import { TABLE_CONTROL_COLUMN_WIDTH } from '../../../../../constants';
 const lookUpTable = {
-	'Title': 'Titulo',
+	'Title': 'Título',
 	'State': 'Estado',
 	'Author': 'Autor',
 	'Published Date': 'Data de Publicação',
@@ -15,7 +15,9 @@ const lookUpTable = {
 	'Content Brief': 'Introdução',
 	'Content Extended': 'Artigo Completo',
 	'Categories': 'Categorias',
-
+	'Email': 'Email',
+	'Password': 'Password',
+	'Can access Keystone': 'Previlégios de Administrador',
 };
 
 const ItemsTable = React.createClass({

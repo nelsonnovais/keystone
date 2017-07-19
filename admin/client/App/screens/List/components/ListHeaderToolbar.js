@@ -24,6 +24,7 @@ function ButtonDivider ({ style, ...props }) {
 };
 
 function CreateButton ({ listName, onClick, ...props }) {
+	console.log('ListName' + listName);
 	return (
 		<GlyphButton
 			block
@@ -32,7 +33,7 @@ function CreateButton ({ listName, onClick, ...props }) {
 			glyph="plus"
 			onClick={onClick}
 			position="left"
-			title={`Create ${listName}`}
+			title={`Adicionar ${listName}`}
 			{...props}
 		>
 			<ResponsiveText
