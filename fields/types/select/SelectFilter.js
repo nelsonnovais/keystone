@@ -184,7 +184,7 @@ class SelectFilter extends Component {
 						{indeterminate ? 'All' : 'None'}
 					</Button>
 					<FormNote style={{ margin: 0 }}>
-						Pressione<Kbd>{metaKeyLabel}</Kbd> para selecionar multiplas opções
+						Prima <Kbd>{metaKeyLabel}</Kbd> para selecionar multiplas opções
 					</FormNote>
 				</div>
 				{this.renderOptions()}

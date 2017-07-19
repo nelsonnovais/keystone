@@ -29,7 +29,7 @@ var Keystone = function () {
 	this._options = {
 		'name': 'Keystone',
 		'brand': 'Keystone',
-		'admin path': 'keystone',
+		'admin path': 'admin',
 		'compress': true,
 		'headless': false,
 		'logger': ':method :url :status :response-time ms',
