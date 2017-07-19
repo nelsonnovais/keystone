@@ -24,6 +24,7 @@ const PopoutHeader = React.createClass({
 			/>
 		) : null;
 		// If we have a title, render it
+		console.log('this header:' + this.props.title);
 		var headerTitle = this.props.title ? (
 			<span
 				key={'title_' + this.props.transitionDirection}

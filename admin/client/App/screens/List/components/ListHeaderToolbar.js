@@ -30,7 +30,6 @@ function ButtonDivider ({ style, ...props }) {
 };
 
 function CreateButton ({ listName, onClick, ...props }) {
-	console.log('ListName' + listName);
 	return (
 		<GlyphButton
 			block
