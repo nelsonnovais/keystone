@@ -13,6 +13,12 @@ import ListHeaderSearch from './ListHeaderSearch';
 
 import ListFiltersAdd from './Filtering/ListFiltersAdd';
 
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Post': 'Post',
+	'Post Category': 'Categoria',
+};
+
 function ButtonDivider ({ style, ...props }) {
 	props.style = {
 		borderLeft: '1px solid rgba(0, 0, 0, 0.1)',
@@ -33,13 +39,13 @@ function CreateButton ({ listName, onClick, ...props }) {
 			glyph="plus"
 			onClick={onClick}
 			position="left"
-			title={`Adicionar ${listName}`}
+			title={`Adicionar ${lookUpTable[listName]}`}
 			{...props}
 		>
 			<ResponsiveText
 				visibleSM="Create"
 				visibleMD="Create"
-				visibleLG={`Adicionar ${listName}`}
+				visibleLG={`Adicionar ${lookUpTable[listName]}`}
 			/>
 		</GlyphButton>
 	);
