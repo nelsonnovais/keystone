@@ -5,6 +5,18 @@ import TableRow from './ItemsTableRow';
 import DragDrop from './ItemsTableDragDrop';
 
 import { TABLE_CONTROL_COLUMN_WIDTH } from '../../../../../constants';
+const lookUpTable = {
+	'Title': 'Titulo',
+	'State': 'Estado',
+	'Author': 'Autor',
+	'Published Date': 'Data de Publicação',
+	'Name': 'Nome',
+	'Image': 'Imagem',
+	'Content Brief': 'Introdução',
+	'Content Extended': 'Artigo Completo',
+	'Categories': 'Categorias',
+
+};
 
 const ItemsTable = React.createClass({
 	propTypes: {
@@ -78,7 +90,7 @@ const ItemsTable = React.createClass({
 							);
 						}}
 						title={buttonTitle}>
-						{col.label}
+						{lookUpTable[col.label]}
 						<span className="th-sort__icon" />
 					</button>
 				</th>
