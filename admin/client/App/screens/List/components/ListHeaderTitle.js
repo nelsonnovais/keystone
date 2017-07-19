@@ -16,7 +16,7 @@ function ListHeaderTitle ({
 	titulo = field[0] + ' ' + field[1];
 	console.log('Field 1: ' + field[1]);
 	console.log('Field 2: ' + field[2]);
-	if (field[2] !== null) {
+	if (field[2] !== undefined) {
 		console.log('Entrei');
 		titulo = field[0] + ' Categorias';
 	};
