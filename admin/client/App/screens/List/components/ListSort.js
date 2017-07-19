@@ -83,7 +83,7 @@ var ListSort = React.createClass({
 				'Title': 'Título',
 				'Author': 'Autor',
 				'State': 'Estado',
-				'Post': 'Post',
+				'Posts': 'Posts',
 				'Image': 'Imagem',
 				'Published Date': 'Data de Publicação',
 				'Content Extended': 'Artigo Completo',
