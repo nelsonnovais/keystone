@@ -64,11 +64,9 @@ export function * updateParams () {
 
 export function * evalQueryParams () {
 	const { pathname, query } = yield select(state => state.routing.locationBeforeTransitions);
-
 	const { cachedQuery } = yield select(state => state.active);
 	const { currentList } = yield select(state => state.lists);
-
-	if (pathname !== `/keystone/${currentList.id}`) return;
+	if (pathname !== `/${Keystone.adminPath}/${currentList.id}`) return;
 
 	if (isEqual(query, cachedQuery)) {
 		yield put({ type: actions.QUERY_HAS_NOT_CHANGED });

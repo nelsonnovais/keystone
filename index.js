@@ -27,9 +27,9 @@ var Keystone = function () {
 	this.fieldTypes = {};
 	this.paths = {};
 	this._options = {
-		'name': 'Keystone',
-		'brand': 'Keystone',
-		'admin path': 'keystone',
+		'name': 'Lana',
+		'brand': 'Lana',
+		'admin path': 'admin',
 		'compress': true,
 		'headless': false,
 		'logger': ':method :url :status :response-time ms',
