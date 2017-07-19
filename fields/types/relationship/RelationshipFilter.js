@@ -14,7 +14,7 @@ import PopoutList from '../../../admin/client/App/shared/Popout/PopoutList';
 
 const INVERTED_OPTIONS = [
 	{ label: 'Relacionado com ', value: false },
-	{ label: 'Sem relação a ', value: true },
+	{ label: 'Sem relação com ', value: true },
 ];
 
 const lookUpTable = {
