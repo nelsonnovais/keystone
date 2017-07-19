@@ -139,7 +139,6 @@ const RelatedItemsList = React.createClass({
 				<Spinner />
 			</Center>
 		);
-		console.log(lookUpTable[this.props.refList.label]);
 		return (
 			<div className="Relationship">
 				<h3 className="Relationship__link"><Link to={listHref}>{this.props.refList.label}</Link></h3>
