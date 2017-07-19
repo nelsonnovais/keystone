@@ -3,6 +3,12 @@ import { css } from 'glamor';
 import GlyphButton from '../GlyphButton';
 import theme from '../../../theme';
 
+const lookUpTable = {
+	'Create a new Post': 'Adicionar novo Post',
+	'Create a new Post Category': 'Adicionar nova Categoria',
+	'Create a new User': 'Adicionar novo Utilizador',
+};
+
 function ModalHeader ({
 	children,
 	className,
@@ -16,13 +22,12 @@ function ModalHeader ({
 	if (children && text) {
 		console.error('Warning: ModalHeader cannot render `children` and `text`. You must provide one or the other.');
 	}
-	console.log('this modal:' + text);
 	return (
 		<div {...props} className={css(classes.header, className)}>
 			<div className={css(classes.grow)}>
 				{text ? (
 					<h4 className={css(classes.text)}>
-						{text}
+						{lookUpTable[text]}
 					</h4>
 				) : children}
 			</div>
