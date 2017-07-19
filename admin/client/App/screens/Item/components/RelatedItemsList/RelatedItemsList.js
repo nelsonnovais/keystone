@@ -18,6 +18,7 @@ const lookUpTable = {
 	'Content Brief': 'Introdução',
 	'Content Extended': 'Artigo Completo',
 	'Categories': 'Categorias',
+
 };
 const RelatedItemsList = React.createClass({
 	propTypes: {
@@ -115,7 +116,7 @@ const RelatedItemsList = React.createClass({
 	},
 	renderTableHeaders () {
 		const cells = this.state.columns.map((col) => {
-			return <th key={col.path}>{lookUpTable[col.label]}</th>;
+			return <th key={col.path}>{col.label}</th>;
 		});
 
 		// add sort col when available
@@ -138,7 +139,7 @@ const RelatedItemsList = React.createClass({
 				<Spinner />
 			</Center>
 		);
-
+		console.log(lookUpTable[this.props.refList.label]);
 		return (
 			<div className="Relationship">
 				<h3 className="Relationship__link"><Link to={listHref}>{this.props.refList.label}</Link></h3>
