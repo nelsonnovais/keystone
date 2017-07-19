@@ -315,7 +315,7 @@ var EditForm = React.createClass({
 			data.createdAt = this.props.data.fields[this.props.list.tracking.createdAt];
 			if (data.createdAt) {
 				elements.push(
-					<FormField key="createdAt" label="Created on">
+					<FormField key="createdAt" label="Criado em">
 						<FormInput noedit title={moment(data.createdAt).format('DD/MM/YYYY h:mm:ssa')}>{moment(data.createdAt).format('Do MMM YYYY')}</FormInput>
 					</FormField>
 				);
@@ -328,7 +328,7 @@ var EditForm = React.createClass({
 				let createdByName = getNameFromData(data.createdBy.name);
 				if (createdByName) {
 					elements.push(
-						<FormField key="createdBy" label="Created by">
+						<FormField key="createdBy" label="Criado por">
 							<FormInput noedit>{data.createdBy.name.first} {data.createdBy.name.last}</FormInput>
 						</FormField>
 					);
@@ -340,7 +340,7 @@ var EditForm = React.createClass({
 			data.updatedAt = this.props.data.fields[this.props.list.tracking.updatedAt];
 			if (data.updatedAt && (!data.createdAt || data.createdAt !== data.updatedAt)) {
 				elements.push(
-					<FormField key="updatedAt" label="Updated on">
+					<FormField key="updatedAt" label="Atualizado em">
 						<FormInput noedit title={moment(data.updatedAt).format('DD/MM/YYYY h:mm:ssa')}>{moment(data.updatedAt).format('Do MMM YYYY')}</FormInput>
 					</FormField>
 				);
@@ -353,7 +353,7 @@ var EditForm = React.createClass({
 				let updatedByName = getNameFromData(data.updatedBy.name);
 				if (updatedByName) {
 					elements.push(
-						<FormField key="updatedBy" label="Updated by">
+						<FormField key="updatedBy" label="Atualizado por">
 							<FormInput noedit>{data.updatedBy.name.first} {data.updatedBy.name.last}</FormInput>
 						</FormField>
 					);
@@ -390,7 +390,7 @@ var EditForm = React.createClass({
 					onCancel={this.toggleResetDialog}
 					onConfirmation={this.handleReset}
 				>
-					<p>Reset your changes to <strong>{this.props.data.name}</strong>?</p>
+					<p>Reverter para valores iniciais<strong>{this.props.data.name}</strong>?</p>
 				</ConfirmationDialog>
 				<ConfirmationDialog
 					confirmationLabel="Delete"
@@ -398,10 +398,10 @@ var EditForm = React.createClass({
 					onCancel={this.toggleDeleteDialog}
 					onConfirmation={this.handleDelete}
 				>
-					Are you sure you want to delete <strong>{this.props.data.name}?</strong>
+					Tem mesmo a certeza que pretende eliminar <strong>{this.props.data.name}?</strong>
 					<br />
 					<br />
-					This cannot be undone.
+					Esta acção não pode ser revertida.
 				</ConfirmationDialog>
 			</form>
 		);

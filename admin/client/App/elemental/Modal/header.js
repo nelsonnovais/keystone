@@ -16,7 +16,7 @@ function ModalHeader ({
 	if (children && text) {
 		console.error('Warning: ModalHeader cannot render `children` and `text`. You must provide one or the other.');
 	}
-
+	console.log('this modal:' + text);
 	return (
 		<div {...props} className={css(classes.header, className)}>
 			<div className={css(classes.grow)}>
