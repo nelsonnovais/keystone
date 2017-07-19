@@ -39,6 +39,27 @@ var PopoutListItem = React.createClass({
 			'is-selected': this.props.isSelected,
 		});
 		const props = blacklist(this.props, 'className', 'icon', 'iconHover', 'isSelected', 'label');
+		const lookUpTable = {
+			'User': 'Utilizador',
+			'Post Categories': 'Categorias',
+			'Image': 'Imagem',
+			'Enquiries': 'Requerimentos',
+			'Posts': 'Posts',
+			'Users': 'Utilizadores',
+			'Name:': 'Nome',
+			'Email': 'Email',
+			'Can access Keystone': 'Previlegios de Administrador',
+			'Title': 'Título',
+			'Author': 'Autor',
+			'State': 'Estado',
+			'Published Date': 'Data de Publicação',
+			'Content Extended': 'Artigo Completo',
+			'Content Brief': 'Introdução',
+			'Categories': 'Categorias',
+			'Draft': 'Rascunho',
+			'Published': 'Publicado',
+			'Archived': 'Arquivado',
+		};
 		return (
 			<button
 				type="button"
@@ -52,7 +73,7 @@ var PopoutListItem = React.createClass({
 			>
 				{this.renderIcon()}
 				<span className="PopoutList__item__label">
-					{this.props.label}
+					{lookUpTable[this.props.label]}
 				</span>
 			</button>
 		);
