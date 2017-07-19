@@ -120,6 +120,7 @@ var ListSort = React.createClass({
 			'Content Extended': 'Artigo Completo',
 			'Content Brief': 'Introdução',
 			'Categories': 'Categorias',
+			'Posts': 'Posts',
 			'Name': 'Nome',
 			'Email': 'Email',
 			'Can access Keystone': 'Previlégios de Administrador',
