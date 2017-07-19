@@ -40,7 +40,7 @@ const PopoutHeader = React.createClass({
 			/>
 		) : null;
 		// If we have a title, render it
-		console.log(lookUpTable[this.props.title]);
+		console.log('resultado' + lookUpTable[this.props.title] !== 'undefined' ? lookUpTable[this.props.title] : this.props.title);
 		var headerTitle = this.props.title ? (
 
 			<span
