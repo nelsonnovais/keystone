@@ -39,7 +39,7 @@ function CreateButton ({ listName, onClick, ...props }) {
 			<ResponsiveText
 				visibleSM="Create"
 				visibleMD="Create"
-				visibleLG={`Create ${listName}`}
+				visibleLG={`Adicionar ${listName}`}
 			/>
 		</GlyphButton>
 	);
