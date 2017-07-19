@@ -43,7 +43,7 @@ const PopoutHeader = React.createClass({
 				key={'title_' + this.props.transitionDirection}
 				className="Popout__header__label"
 			>
-				{lookUpTable[this.props.title] !== undefined ? lookUpTable[this.props.title] : this.props.title}
+				{lookUpTable[this.props.title]}
 			</span>
 		) : null;
 
