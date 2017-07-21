@@ -14,9 +14,7 @@ function ListHeaderTitle ({
 	var titulo = '';
 	const field = title.split(' ');
 	titulo = field[0] + ' ' + field[1];
-
 	if (field[2] !== undefined) {
-		console.log('Entrei');
 		titulo = field[0] + ' Categorias';
 	};
 	return (
