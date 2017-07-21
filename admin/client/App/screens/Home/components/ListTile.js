@@ -28,7 +28,7 @@ var ListTile = React.createClass({
 			'Email': 'Email',
 			'Can access Keystone': 'Previlégios de Administrador',
 		};
-		console.log('Butão Criar');
+
 		return (
 			<div className="dashboard-group__list" {...opts}>
 				<span className="dashboard-group__list-inner">

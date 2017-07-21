@@ -162,7 +162,7 @@ const CreateForm = React.createClass({
 				</Modal.Body>
 				<Modal.Footer>
 					<Button color="success" type="submit" data-button-type="submit">
-						Create
+						Criar
 					</Button>
 					<Button
 						variant="link"
@@ -170,7 +170,7 @@ const CreateForm = React.createClass({
 						data-button-type="cancel"
 						onClick={this.props.onCancel}
 					>
-						Cancel
+						Cancelar
 					</Button>
 				</Modal.Footer>
 			</Form>
