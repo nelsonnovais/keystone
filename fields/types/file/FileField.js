@@ -138,13 +138,13 @@ module.exports = Field.create({
 		if (this.state.userSelectedFile) {
 			return (
 				<FileChangeMessage color="success">
-					Save to Upload
+					Guardar
 				</FileChangeMessage>
 			);
 		} else if (this.state.removeExisting) {
 			return (
 				<FileChangeMessage color="danger">
-					File {this.props.autoCleanup ? 'deleted' : 'removed'} - save to confirm
+					Ficheiro {this.props.autoCleanup ? 'Eliminado' : 'Removido'} - salvar?
 				</FileChangeMessage>
 			);
 		} else {
@@ -155,15 +155,15 @@ module.exports = Field.create({
 		if (this.state.removeExisting) {
 			return (
 				<Button variant="link" onClick={this.undoRemove}>
-					Undo Remove
+					Anular Remover
 				</Button>
 			);
 		} else {
 			var clearText;
 			if (this.state.userSelectedFile) {
-				clearText = 'Cancel Upload';
+				clearText = 'Cancelar Upload';
 			} else {
-				clearText = (this.props.autoCleanup ? 'Delete File' : 'Remove File');
+				clearText = (this.props.autoCleanup ? 'Remover Ficheiro' : 'Eliminar Ficheiro');
 			}
 			return (
 				<Button variant="link" color="cancel" onClick={this.handleRemove}>

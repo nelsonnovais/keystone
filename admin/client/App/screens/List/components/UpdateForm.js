@@ -86,7 +86,7 @@ var UpdateForm = React.createClass({
 
 		const fieldsUI = formFields.length ? formFields : (
 			<BlankState
-				heading="Choose a field above to begin"
+				heading="Escolha um campo para começar"
 				style={{ padding: '3em 2em' }}
 			/>
 		);
@@ -121,8 +121,8 @@ var UpdateForm = React.createClass({
 					{this.renderFields()}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button color="primary" submit>Update</Button>
-					<Button color="cancel" variant="link" onClick={this.handleClose}>Cancel</Button>
+					<Button color="primary" submit>Atualizar</Button>
+					<Button color="cancel" variant="link" onClick={this.handleClose}>Cancelar</Button>
 				</Modal.Footer>
 			</Form>
 		);
