@@ -393,7 +393,7 @@ var EditForm = React.createClass({
 					<p>Reverter para valores iniciais<strong>{this.props.data.name}</strong>?</p>
 				</ConfirmationDialog>
 				<ConfirmationDialog
-					confirmationLabel="Delete"
+					confirmationLabel="Eliminar"
 					isOpen={this.state.deleteDialogIsOpen}
 					onCancel={this.toggleDeleteDialog}
 					onConfirmation={this.handleDelete}
