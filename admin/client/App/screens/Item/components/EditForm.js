@@ -215,25 +215,23 @@ var EditForm = React.createClass({
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
-				{lookUpTable[field]}
+				{field}
 			</div>
 		);
 		if (nameFieldIsFormHeader) {
-			console.log('this name field: ' + nameField.label);
 			var nameFieldProps = this.getFieldProps(nameField);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
 			nameFieldProps.inputProps = {
 				className: 'item-name-field',
-				placeholder: [nameField.label],
+				placeholder: nameField.label,
 				size: 'large',
 			};
 			return wrapNameField(
 				React.createElement(Fields[nameField.type], nameFieldProps)
 			);
 		} else {
-			console.log('this props:' + this.props.data.name);
 			return wrapNameField(
 				<h2>{this.props.data.name || '(no name)'}</h2>
 			);
@@ -278,7 +276,7 @@ var EditForm = React.createClass({
 		}
 
 		const { loading } = this.state;
-		const loadingButtonText = loading ? 'Saving' : 'Save';
+		const loadingButtonText = loading ? 'Saving' : 'Salvar';
 
 		// Padding must be applied inline so the FooterBar can determine its
 		// innerHeight at runtime. Aphrodite's styling comes later...
