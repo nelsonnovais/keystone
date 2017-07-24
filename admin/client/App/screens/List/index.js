@@ -160,10 +160,10 @@ const ListView = React.createClass({
 				label: 'Delete',
 				body: (
 					<div>
-						Tem a certeza que pretende eliminar {itemCount}?
+						Tem a certeza que pretende eliminar o post: {itemCount}?
 						<br />
 						<br />
-						Não poderá reverter.
+						Não poderá reverter esta acção.
 					</div>
 				),
 				onConfirmation: () => {
@@ -349,10 +349,10 @@ const ListView = React.createClass({
 				label: 'Delete',
 				body: (
 					<div>
-						Tem a certeza que pretende eliminar <strong>{item.name}</strong>?
+						Tem a certeza que pretende eliminar a categoria: <strong>{item.name}</strong>?
 						<br />
 						<br />
-						Não poderá reverter.
+						Não poderá reverter esta acção.
 					</div>
 				),
 				onConfirmation: () => {
