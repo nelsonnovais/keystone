@@ -198,6 +198,7 @@ var EditForm = React.createClass({
 	renderNameField () {
 		var nameField = this.props.list.nameField;
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
+		console.log('this field: ' + this.props.list.nameField);
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
 				{field}

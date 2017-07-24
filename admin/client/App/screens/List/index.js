@@ -157,7 +157,7 @@ const ListView = React.createClass({
 		this.setState({
 			confirmationDialog: {
 				isOpen: true,
-				label: 'Delete',
+				label: 'Eliminar',
 				body: (
 					<div>
 						Tem a certeza que pretende eliminar: {itemCount}?
@@ -346,7 +346,7 @@ const ListView = React.createClass({
 		this.setState({
 			confirmationDialog: {
 				isOpen: true,
-				label: 'Delete',
+				label: 'Eliminar',
 				body: (
 					<div>
 						Tem a certeza que pretende eliminar: <strong>{item.name}</strong>?
