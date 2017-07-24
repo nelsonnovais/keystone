@@ -219,6 +219,7 @@ var EditForm = React.createClass({
 			</div>
 		);
 		if (nameFieldIsFormHeader) {
+			console.log('this name field: ' + nameField.label);
 			var nameFieldProps = this.getFieldProps(nameField);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
@@ -232,6 +233,7 @@ var EditForm = React.createClass({
 				React.createElement(Fields[nameField.type], nameFieldProps)
 			);
 		} else {
+			console.log('this props:' + this.props.data.name);
 			return wrapNameField(
 				<h2>{this.props.data.name || '(no name)'}</h2>
 			);
