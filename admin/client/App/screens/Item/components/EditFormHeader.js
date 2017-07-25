@@ -148,7 +148,7 @@ export const EditFormHeader = React.createClass({
 		}
 		return (
 			<GlyphButton data-e2e-item-create-button="true" color="success" glyph="plus" position="left" {...props}>
-				<ResponsiveText hiddenXS={`Novo ${lookUpTable[singular]}`} visibleXS="Create" />
+				<ResponsiveText hiddenXS={`Adicionar ${lookUpTable[singular]}`} visibleXS="Create" />
 			</GlyphButton>
 		);
 	},
