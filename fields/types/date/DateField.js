@@ -73,12 +73,13 @@ module.exports = Field.create({
 		var value = this.props.value && dateAsMoment.isValid()
 			? dateAsMoment.format(this.props.inputFormat)
 			: this.props.value;
+
 		return (
 			<Group>
 				<Section grow>
 					<DateInput
 						format={this.props.inputFormat}
-						name="Data de Publicação"
+						name={this.getInputName(this.props.path)}
 						onChange={this.valueChanged}
 						ref="dateInput"
 						value={value}
