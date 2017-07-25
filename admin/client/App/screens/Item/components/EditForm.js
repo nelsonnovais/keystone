@@ -161,7 +161,7 @@ var EditForm = React.createClass({
 				this.setState({
 					alerts: {
 						success: {
-							success: 'Your changes have been saved successfully',
+							success: 'As alterações foram alteradas com sucesso.',
 						},
 					},
 					lastValues: this.state.values,
@@ -211,6 +211,7 @@ var EditForm = React.createClass({
 		}
 	},
 	renderNameField () {
+		console.log('this props name field' + this.props.list.nameField + ' and header' + this.props.list.nameFieldIsFormHeader);
 		var nameField = this.props.list.nameField;
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
 		var wrapNameField = field => (
@@ -280,7 +281,7 @@ var EditForm = React.createClass({
 
 		// Padding must be applied inline so the FooterBar can determine its
 		// innerHeight at runtime. Aphrodite's styling comes later...
-
+		console.log('buttontext' + loadingButtonText);
 		return (
 			<FooterBar style={styles.footerbar}>
 				<div style={styles.footerbarInner}>
