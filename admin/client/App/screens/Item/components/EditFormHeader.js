@@ -81,7 +81,6 @@ export const EditFormHeader = React.createClass({
 			// represented as siblings inside a single list item; this got a
 			// bit messy...
 			item.items.forEach(link => {
-				console.log('label' + link.label);
 				drilldown.push({
 					href: link.href,
 					label: link.label,

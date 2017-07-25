@@ -216,7 +216,6 @@ var EditForm = React.createClass({
 	renderNameField () {
 		var nameField = this.props.list.nameField;
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
-		console.log('render name');
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
 				{field}
@@ -224,7 +223,6 @@ var EditForm = React.createClass({
 		);
 		if (nameFieldIsFormHeader) {
 			var nameFieldProps = this.getFieldProps(nameField);
-			console.log('name field' + nameField.label);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
@@ -244,7 +242,6 @@ var EditForm = React.createClass({
 	},
 	renderFormElements () {
 		var headings = 0;
-		console.log('render formelements');
 		return this.props.list.uiElements.map((el, index) => {
 			// Don't render the name field if it is the header since it'll be rendered in BIG above
 			// the list. (see renderNameField method, this is the reverse check of the one it does)
@@ -263,6 +260,7 @@ var EditForm = React.createClass({
 
 			if (el.type === 'field') {
 				var field = this.props.list.fields[el.field];
+				console.log('Field:' + field);
 				var props = this.getFieldProps(field);
 				if (typeof Fields[field.type] !== 'function') {
 					return React.createElement(InvalidFieldType, { type: field.type, path: field.path, key: field.path });
