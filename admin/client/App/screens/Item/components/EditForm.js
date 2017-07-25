@@ -176,7 +176,7 @@ var EditForm = React.createClass({
 		var list = this.props.list;
 
 		if (list.nameField && list.autokey && this.props.data[list.autokey.path]) {
-			console.log('className1:' + className);
+
 			return (
 				<div className={className}>
 					<AltText
@@ -192,7 +192,7 @@ var EditForm = React.createClass({
 				</div>
 			);
 		} else if (list.autokey && this.props.data[list.autokey.path]) {
-			console.log('className1:' + className);
+
 			return (
 				<div className={className}>
 					<span className="EditForm__key-or-id__label">{list.autokey.path}: </span>
@@ -202,7 +202,7 @@ var EditForm = React.createClass({
 				</div>
 			);
 		} else if (list.nameField) {
-			console.log('className2:' + className);
+
 			return (
 				<div className={className}>
 					<span className="EditForm__key-or-id__label">ID: </span>
@@ -216,6 +216,7 @@ var EditForm = React.createClass({
 	renderNameField () {
 		var nameField = this.props.list.nameField;
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
+		console.log('render name');
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
 				{field}
@@ -223,6 +224,7 @@ var EditForm = React.createClass({
 		);
 		if (nameFieldIsFormHeader) {
 			var nameFieldProps = this.getFieldProps(nameField);
+			console.log('name field' + nameField.label);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
@@ -242,7 +244,7 @@ var EditForm = React.createClass({
 	},
 	renderFormElements () {
 		var headings = 0;
-
+		console.log('render formelements');
 		return this.props.list.uiElements.map((el, index) => {
 			// Don't render the name field if it is the header since it'll be rendered in BIG above
 			// the list. (see renderNameField method, this is the reverse check of the one it does)
