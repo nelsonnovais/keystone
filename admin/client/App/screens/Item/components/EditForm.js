@@ -176,6 +176,7 @@ var EditForm = React.createClass({
 		var list = this.props.list;
 
 		if (list.nameField && list.autokey && this.props.data[list.autokey.path]) {
+			console.log('className1:' + className);
 			return (
 				<div className={className}>
 					<AltText
