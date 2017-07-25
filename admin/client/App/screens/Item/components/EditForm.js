@@ -220,7 +220,7 @@ var EditForm = React.createClass({
 		);
 		if (nameFieldIsFormHeader) {
 			var nameFieldProps = this.getFieldProps(nameField);
-			console.log('nameField:' + nameField);
+			console.log('nameField:' + nameField.label);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
