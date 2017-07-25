@@ -24,7 +24,7 @@ module.exports = Field.create({
 	propTypes: {
 		formatString: React.PropTypes.string,
 		inputFormat: React.PropTypes.string,
-		label: "Data de Publicação",
+		label: React.PropTypes.string,
 		note: React.PropTypes.string,
 		onChange: React.PropTypes.func,
 		path: React.PropTypes.string,

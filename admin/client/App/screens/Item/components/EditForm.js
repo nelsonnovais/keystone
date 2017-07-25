@@ -231,7 +231,6 @@ var EditForm = React.createClass({
 				placeholder: nameField.label,
 				size: 'large',
 			};
-			console.log(nameFieldProps);
 			return wrapNameField(
 				React.createElement(Fields[nameField.type], nameFieldProps)
 			);
