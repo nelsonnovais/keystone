@@ -14,7 +14,7 @@ function DrilldownItem ({ className, href, label, separate, separator, style, ..
 		paddingRight: 0,
 		...style,
 	};
-
+	console.log('drilldownitem label' + label);
 	return (
 		<li {...props}>
 			<Button

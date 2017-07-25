@@ -4,7 +4,6 @@ import DrilldownItem from './DrilldownItem';
 
 function Drilldown ({ className, items, ...props }) {
 	props.className = css(classes.drilldown, className);
-
 	return (
 		<ul {...props}>
 			{items.map((item, idx) => (
@@ -18,7 +17,6 @@ function Drilldown ({ className, items, ...props }) {
 		</ul>
 	);
 };
-
 Drilldown.propTypes = {
 	items: PropTypes.arrayOf(
 		PropTypes.shape({

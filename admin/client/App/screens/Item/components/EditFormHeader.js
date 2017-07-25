@@ -13,6 +13,7 @@ import { GlyphButton, ResponsiveText } from '../../../elemental';
 const lookUpTable = {
 	'Post': 'Post',
 	'Post Category': 'Categoria',
+	'User': 'Utilizador',
 };
 
 export const EditFormHeader = React.createClass({
