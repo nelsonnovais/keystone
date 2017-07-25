@@ -26,21 +26,6 @@ import { deleteItem } from '../actions';
 
 import { upcase } from '../../../../utils/string';
 
-const lookUpTable = {
-	'Title': 'Título',
-	'Author': 'Autor',
-	'State': 'Estado',
-	'Image': 'Imagem',
-	'Published Date': 'Data de Publicação',
-	'Content Extended': 'Artigo Completo',
-	'Content Brief': 'Introdução',
-	'Categories': 'Categorias',
-	'Name': 'Nome',
-	'Email': 'Email',
-	'Can access Keystone': 'Previlegios de Administrador',
-	'Password': 'Password',
-};
-
 function getNameFromData (data) {
 	if (typeof data === 'object') {
 		if (typeof data.first === 'string' && typeof data.last === 'string') {

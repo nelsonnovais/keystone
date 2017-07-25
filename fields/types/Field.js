@@ -6,6 +6,21 @@ import { FormField, FormInput, FormNote } from '../../admin/client/App/elemental
 import blacklist from 'blacklist';
 import CollapsedFieldLabel from '../components/CollapsedFieldLabel';
 
+const lookUpTable = {
+	'Title': 'Título',
+	'Author': 'Autor',
+	'State': 'Estado',
+	'Image': 'Imagem',
+	'Published Date': 'Data de Publicação',
+	'Content Extended': 'Artigo Completo',
+	'Content Brief': 'Introdução',
+	'Categories': 'Categorias',
+	'Name': 'Nome',
+	'Email': 'Email',
+	'Can access Keystone': 'Previlegios de Administrador',
+	'Password': 'Password',
+};
+
 function isObject (arg) {
 	return Object.prototype.toString.call(arg) === '[object Object]';
 }
@@ -78,7 +93,6 @@ var Base = module.exports.Base = {
 		);
 	},
 	renderValue () {
-		console.log('this props value' + this.props.value);
 		return <FormInput noedit>{this.props.value}</FormInput>;
 	},
 	renderUI () {
@@ -87,9 +101,8 @@ var Base = module.exports.Base = {
 			this.props.className,
 			{ 'field-monospace': this.props.monospace }
 		);
-		console.log('label' + this.props.label);
 		return (
-			<FormField htmlFor={this.props.path} label={this.props.label} className={wrapperClassName} cropLabel>
+			<FormField htmlFor={this.props.path} label={lookUpTable[this.props.label]} className={wrapperClassName} cropLabel>
 				<div className={'FormField__inner field-size-' + this.props.size}>
 					{this.shouldRenderField() ? this.renderField() : this.renderValue()}
 				</div>
