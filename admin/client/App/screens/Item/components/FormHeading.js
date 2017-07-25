@@ -10,7 +10,6 @@ module.exports = React.createClass({
 		if (!evalDependsOn(this.props.options.dependsOn, this.props.options.values)) {
 			return null;
 		}
-		console.log('this form heading' + this.props.content);
 		return <h3 className="form-heading">{this.props.content}</h3>;
 	},
 });

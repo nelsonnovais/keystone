@@ -73,7 +73,7 @@ module.exports = Field.create({
 		var value = this.props.value && dateAsMoment.isValid()
 			? dateAsMoment.format(this.props.inputFormat)
 			: this.props.value;
-
+		console.log('this Input Name:' + this.getInputName(this.props.path));
 		return (
 			<Group>
 				<Section grow>
@@ -86,7 +86,7 @@ module.exports = Field.create({
 					/>
 				</Section>
 				<Section>
-					<Button onClick={this.setToday}>Today</Button>
+					<Button onClick={this.setToday}>Hoje</Button>
 				</Section>
 			</Group>
 		);

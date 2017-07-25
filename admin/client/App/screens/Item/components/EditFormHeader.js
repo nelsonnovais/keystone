@@ -10,6 +10,11 @@ import { Link } from 'react-router';
 import Drilldown from './Drilldown';
 import { GlyphButton, ResponsiveText } from '../../../elemental';
 
+const lookUpTable = {
+	'Post': 'Post',
+	'Post Category': 'Categoria',
+};
+
 export const EditFormHeader = React.createClass({
 	displayName: 'EditFormHeader',
 	propTypes: {
@@ -143,7 +148,7 @@ export const EditFormHeader = React.createClass({
 		}
 		return (
 			<GlyphButton data-e2e-item-create-button="true" color="success" glyph="plus" position="left" {...props}>
-				<ResponsiveText hiddenXS={`Novo ${singular}`} visibleXS="Create" />
+				<ResponsiveText hiddenXS={`Novo ${lookUpTable[singular]}`} visibleXS="Create" />
 			</GlyphButton>
 		);
 	},
