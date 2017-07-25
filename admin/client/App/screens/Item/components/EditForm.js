@@ -215,7 +215,7 @@ var EditForm = React.createClass({
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
-				{field + '2'}
+				{field}
 			</div>
 		);
 		if (nameFieldIsFormHeader) {
