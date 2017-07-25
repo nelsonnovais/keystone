@@ -148,7 +148,7 @@ module.exports = Field.create({
 			);
 		}
 		return (
-			<FormField label="Data de Publicação" className="field-type-datetime" htmlFor={this.getInputName(this.props.path)}>
+			<FormField label={this.props.label} className="field-type-datetime" htmlFor={this.getInputName(this.props.path)}>
 				{input}
 				{this.renderNote()}
 			</FormField>

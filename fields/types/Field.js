@@ -78,6 +78,7 @@ var Base = module.exports.Base = {
 		);
 	},
 	renderValue () {
+		console.log('this props value' + this.props.value);
 		return <FormInput noedit>{this.props.value}</FormInput>;
 	},
 	renderUI () {
@@ -86,6 +87,7 @@ var Base = module.exports.Base = {
 			this.props.className,
 			{ 'field-monospace': this.props.monospace }
 		);
+		console.log('label' + this.props.label);
 		return (
 			<FormField htmlFor={this.props.path} label={this.props.label} className={wrapperClassName} cropLabel>
 				<div className={'FormField__inner field-size-' + this.props.size}>
