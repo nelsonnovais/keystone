@@ -191,6 +191,7 @@ var EditForm = React.createClass({
 				</div>
 			);
 		} else if (list.autokey && this.props.data[list.autokey.path]) {
+			console.log('className1:' + className);
 			return (
 				<div className={className}>
 					<span className="EditForm__key-or-id__label">{list.autokey.path}: </span>
@@ -200,6 +201,7 @@ var EditForm = React.createClass({
 				</div>
 			);
 		} else if (list.nameField) {
+			console.log('className2:' + className);
 			return (
 				<div className={className}>
 					<span className="EditForm__key-or-id__label">ID: </span>
