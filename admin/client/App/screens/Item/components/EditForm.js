@@ -211,7 +211,6 @@ var EditForm = React.createClass({
 		}
 	},
 	renderNameField () {
-		console.log('this props name field' + this.props.list.nameField + ' and header' + this.props.list.nameFieldIsFormHeader);
 		var nameField = this.props.list.nameField;
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
 		var wrapNameField = field => (
@@ -221,6 +220,7 @@ var EditForm = React.createClass({
 		);
 		if (nameFieldIsFormHeader) {
 			var nameFieldProps = this.getFieldProps(nameField);
+			console.log('nameField:' + nameField);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
