@@ -110,7 +110,6 @@ var ListDownloadForm = React.createClass({
 
 			const columnKey = el.field.path;
 			const columnValue = this.state.selectedColumns[columnKey];
-			console.log('El field label' + el.field.label);
 			return (
 				<PopoutList.Item
 					key={'item_' + el.field.path}
