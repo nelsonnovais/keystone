@@ -215,12 +215,11 @@ var EditForm = React.createClass({
 		var nameFieldIsFormHeader = this.props.list.nameFieldIsFormHeader;
 		var wrapNameField = field => (
 			<div className="EditForm__name-field">
-				{field}
+				{field + '2'}
 			</div>
 		);
 		if (nameFieldIsFormHeader) {
 			var nameFieldProps = this.getFieldProps(nameField);
-			console.log('nameField:' + nameField.label);
 			nameFieldProps.label = null;
 			nameFieldProps.size = 'full';
 			nameFieldProps.autoFocus = true;
@@ -233,7 +232,6 @@ var EditForm = React.createClass({
 				React.createElement(Fields[nameField.type], nameFieldProps)
 			);
 		} else {
-			console.log('props data name' + this.props.data.name);
 			return wrapNameField(
 				<h2>{this.props.data.name || '(no name)'}</h2>
 			);
@@ -282,7 +280,6 @@ var EditForm = React.createClass({
 
 		// Padding must be applied inline so the FooterBar can determine its
 		// innerHeight at runtime. Aphrodite's styling comes later...
-		console.log('buttontext' + loadingButtonText);
 		return (
 			<FooterBar style={styles.footerbar}>
 				<div style={styles.footerbarInner}>
@@ -300,7 +297,7 @@ var EditForm = React.createClass({
 					{!this.props.list.noedit && (
 						<Button disabled={loading} onClick={this.toggleResetDialog} variant="link" color="cancel" data-button="reset">
 							<ResponsiveText
-								hiddenXS="reset changes"
+								hiddenXS="Eliminar Alterações"
 								visibleXS="reset"
 							/>
 						</Button>
@@ -308,7 +305,7 @@ var EditForm = React.createClass({
 					{!this.props.list.nodelete && (
 						<Button disabled={loading} onClick={this.toggleDeleteDialog} variant="link" color="delete" style={styles.deleteButton} data-button="delete">
 							<ResponsiveText
-								hiddenXS={`delete ${this.props.list.singular.toLowerCase()}`}
+								hiddenXS={`Eliminar ${this.props.list.singular.toLowerCase()}`}
 								visibleXS="delete"
 							/>
 						</Button>
