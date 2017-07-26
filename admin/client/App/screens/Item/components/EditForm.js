@@ -26,6 +26,11 @@ import { deleteItem } from '../actions';
 
 import { upcase } from '../../../../utils/string';
 
+const lookUptable = {
+	'Post': 'Post',
+	'Post Category': 'Categoria',
+	'User': 'Utilizador',
+};
 function getNameFromData (data) {
 	if (typeof data === 'object') {
 		if (typeof data.first === 'string' && typeof data.last === 'string') {
@@ -293,7 +298,7 @@ var EditForm = React.createClass({
 					{!this.props.list.nodelete && (
 						<Button disabled={loading} onClick={this.toggleDeleteDialog} variant="link" color="delete" style={styles.deleteButton} data-button="delete">
 							<ResponsiveText
-								hiddenXS={`Eliminar ${this.props.list.singular.toLowerCase()}`}
+								hiddenXS={`Eliminar ${lookUptable[this.props.list.singular.toLowerCase()]}`}
 								visibleXS="delete"
 							/>
 						</Button>
