@@ -24,8 +24,7 @@ class FormSelect extends Component {
 				{options ? (
 					<select {...props}>{options.map(opt => (
 						<option key={opt.value} value={opt.value}>
-							{opt.label}
-							{console.log(opt.label)}
+							{1 + 1}
 						</option>
 					))}
 					</select>
