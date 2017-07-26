@@ -134,7 +134,6 @@ var Mixins = module.exports.Mixins = {
 			return (
 				<FormField>
 					<CollapsedFieldLabel onClick={this.uncollapse}>+ Add {this.props.label.toLowerCase()}</CollapsedFieldLabel>
-					{console.log(this.props.label)}
 				</FormField>
 			);
 		},
