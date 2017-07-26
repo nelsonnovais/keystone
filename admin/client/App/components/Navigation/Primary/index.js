@@ -39,7 +39,7 @@ var PrimaryNavigation = React.createClass({
 			<PrimaryNavItem
 				label="octicon-sign-out"
 				href={this.props.signoutUrl}
-				title="Sign Out"
+				title="Sair"
 			>
 				<span className="octicon octicon-sign-out" />
 			</PrimaryNavItem>
