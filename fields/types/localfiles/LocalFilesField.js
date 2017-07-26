@@ -184,7 +184,6 @@ module.exports = Field.create({
 			if (thumb && thumb.props.deleted) remove.push(thumb.props._id);
 		});
 		if (remove.length) value = 'delete:' + remove.join(',');
-		console.log(value);
 		return <input ref="action" className="field-action" type="hidden" value={value} name={this.props.paths.action} />;
 	},
 

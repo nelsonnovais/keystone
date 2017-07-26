@@ -220,6 +220,7 @@ var EditForm = React.createClass({
 				React.createElement(Fields[nameField.type], nameFieldProps)
 			);
 		} else {
+
 			return wrapNameField(
 				<h2>{this.props.data.name || '(no name)'}</h2>
 			);

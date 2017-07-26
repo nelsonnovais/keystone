@@ -93,6 +93,7 @@ var Base = module.exports.Base = {
 		);
 	},
 	renderValue () {
+		console.log(this.props.value);
 		return <FormInput noedit>{this.props.value}</FormInput>;
 	},
 	renderUI () {
