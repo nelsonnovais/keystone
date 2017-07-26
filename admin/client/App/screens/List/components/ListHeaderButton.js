@@ -3,7 +3,6 @@ import React, { PropTypes } from 'react';
 import { DropdownButton, Glyph } from '../../../elemental';
 
 function ListHeaderButton ({ className, label, glyph, ...props }) {
-	console.log('this button: ' + label);
 	return (
 		<DropdownButton block {...props}>
 			<Glyph name={glyph} aphroditeStyles={classes.glyph} />
