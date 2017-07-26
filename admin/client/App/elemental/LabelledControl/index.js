@@ -19,7 +19,6 @@ function LabelledControl ({
 		<label title={title} className={labelClassName}>
 			<input {...props} className={css(classes.control)} />
 			<span className={css(classes.label)}>{label}</span>
-			{console.log(label)}
 		</label>
 	);
 };
