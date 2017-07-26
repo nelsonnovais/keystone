@@ -22,7 +22,7 @@ function DrilldownItem ({ className, href, label, separate, separator, style, ..
 				to={href}
 				variant="link"
 				>
-				{label}
+				{console.log(label)}
 			</Button>
 			{separate && (
 				<span className={css(classes.separator)}>

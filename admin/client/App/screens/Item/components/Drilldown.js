@@ -10,7 +10,7 @@ function Drilldown ({ className, items, ...props }) {
 				<DrilldownItem
 					href={item.href}
 					key={idx}
-					label="ei"
+					label={item.label}
 					separate={idx < items.length - 1}
 				/>
 			))}
