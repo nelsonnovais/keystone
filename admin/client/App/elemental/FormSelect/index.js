@@ -3,12 +3,6 @@ import React, { Component, PropTypes } from 'react';
 
 import classes from './styles';
 
-const lookUpTable = {
-	'Draft': 'Rascunho',
-	'Published': 'Publicado',
-	'Archived': 'Arquivado',
-};
-
 class FormSelect extends Component {
 	render () {
 		const { children, id, options, ...props } = this.props;
@@ -30,7 +24,7 @@ class FormSelect extends Component {
 				{options ? (
 					<select {...props}>{options.map(opt => (
 						<option key={opt.value} value={opt.value}>
-							{lookUpTable[opt.label]}
+							{opt.label}
 						</option>
 					))}
 					</select>
