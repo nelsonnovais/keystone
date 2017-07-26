@@ -298,7 +298,7 @@ var EditForm = React.createClass({
 					{!this.props.list.nodelete && (
 						<Button disabled={loading} onClick={this.toggleDeleteDialog} variant="link" color="delete" style={styles.deleteButton} data-button="delete">
 							<ResponsiveText
-								hiddenXS={`Eliminar ${lookUptable[this.props.list.singular.toLowerCase()]}`}
+								hiddenXS={`Eliminar ${this.props.list.singular.toLowerCase()}`}
 								visibleXS="delete"
 							/>
 						</Button>
