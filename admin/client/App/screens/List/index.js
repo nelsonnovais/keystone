@@ -219,7 +219,8 @@ const ListView = React.createClass({
 		const list = this.props.currentList;
 		const currentPage = this.props.lists.page.index;
 		const pageSize = this.props.lists.page.size;
-
+		console.log('plurar:' + list.plural);
+		console.log('singular' + list.singular);
 		return (
 			<Pagination
 				currentPage={currentPage}
