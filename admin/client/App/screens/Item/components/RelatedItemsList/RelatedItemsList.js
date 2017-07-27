@@ -7,6 +7,12 @@ import ListRow from './RelatedItemsListRow';
 
 import { loadRelationshipItemData } from '../../actions';
 import { TABLE_CONTROL_COLUMN_WIDTH } from '../../../../../constants';
+const lookUpTable = {
+	'Title': 'Título',
+	'State': 'Estado',
+	'Author': 'Autor',
+	'Published Date': 'Data de Publicação',
+};
 const RelatedItemsList = React.createClass({
 	propTypes: {
 		dispatch: React.PropTypes.func.isRequired,
@@ -99,13 +105,11 @@ const RelatedItemsList = React.createClass({
 	},
 	renderTableCols () {
 		const cols = this.state.columns.map((col) => <col width={col.width} key={col.path} />);
-		console.log(cols);
 		return <colgroup>{cols}</colgroup>;
 	},
 	renderTableHeaders () {
 		const cells = this.state.columns.map((col) => {
-			console.log('label' + col.label);
-			return <th key={col.path}>{col.label}</th>;
+			return <th key={col.path}>{lookUpTable[col.label]}</th>;
 		});
 
 		// add sort col when available
