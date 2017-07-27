@@ -17,7 +17,7 @@ function ListHeaderTitle ({
 	titulo = field[0] + ' ' + field[1];
 	user = field[1].split(' ');
 	console.log(user[0]);
-	if (user[0] === 'User ') {
+	if (user[0] === 'User') {
 		console.log('entrei');
 	};
 	if (field[2] !== undefined) {
