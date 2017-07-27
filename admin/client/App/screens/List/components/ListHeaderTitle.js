@@ -18,10 +18,12 @@ function ListHeaderTitle ({
 }) {
 	var titulo = '';
 	const field = title.split(' ');
-	console.log(field[1]);
 	titulo = field[0] + ' ' + field[1];
 	if (field[2] !== undefined) {
 		titulo = field[0] + ' Categorias';
+	} else if (field[1] === 'User') {
+		console.log('entrei');
+		titulo = field[0] + 'Utilizador';
 	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
