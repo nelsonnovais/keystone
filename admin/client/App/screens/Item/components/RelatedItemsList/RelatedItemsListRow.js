@@ -17,7 +17,9 @@ class RelatedItemsListRow extends Component {
 		const cells = columns.map((col, i) => {
 			const ColumnType = Columns[col.type] || Columns.__unrecognised__;
 			const linkTo = !i ? `${Keystone.adminPath}/${refList.path}/${item.id}` : undefined;
-			console.log(col.path);
+			console.log('l' + linkTo);
+			console.log('r' + refList);
+			console.log('d' + item);
 			return <ColumnType key={col.path} list={refList} col={col} data={item} linkTo={linkTo} />;
 		});
 
