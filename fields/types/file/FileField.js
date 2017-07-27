@@ -200,7 +200,7 @@ module.exports = Field.create({
 				{this.hasFile() && this.renderClearButton()}
 			</div>
 		);
-
+		console.log('label file field' + label);
 		return (
 			<div data-field-name={path} data-field-type="file">
 				<FormField label={label} htmlFor={path}>

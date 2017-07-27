@@ -80,7 +80,7 @@ module.exports = Field.create({
 						autoComplete="off"
 						name={this.getInputName(paths.last)}
 						onChange={this.changeLast}
-						placeholder="Ultimo Nome"
+						placeholder="Último Nome"
 						value={value.last}
 					/>
 				</Grid.Col>
