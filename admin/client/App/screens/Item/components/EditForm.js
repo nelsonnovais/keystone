@@ -397,7 +397,7 @@ var EditForm = React.createClass({
 					onCancel={this.toggleResetDialog}
 					onConfirmation={this.handleReset}
 				>
-					<p>Reverter para valores iniciais<strong>{this.props.data.name}</strong>?</p>
+					<p>Reverter alterações: <strong>{this.props.data.name}</strong>?</p>
 				</ConfirmationDialog>
 				<ConfirmationDialog
 					confirmationLabel="Eliminar"

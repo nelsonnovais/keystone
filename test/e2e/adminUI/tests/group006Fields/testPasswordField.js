@@ -39,7 +39,7 @@ module.exports = {
 			],
 		});
 		browser.adminUIInitialFormScreen.save();
-		browser.adminUIInitialFormScreen.assertElementTextEquals({ element: '@flashError', text: 'Passwords must match' });
+		browser.adminUIInitialFormScreen.assertElementTextEquals({ element: '@flashError', text: 'As passwords não são iguais.' });
 		browser.adminUIInitialFormScreen.fillFieldInputs({
 			fields: [
 				{ name: 'fieldA', input: { value: 'password1', confirm: 'password1' }, },
@@ -88,7 +88,7 @@ module.exports = {
 		browser.adminUIItemScreen.save();
 		browser.adminUIApp.waitForItemScreen();
 
-		browser.adminUIItemScreen.assertElementTextEquals({ element: '@flashError', text: 'Passwords must match' });
+		browser.adminUIItemScreen.assertElementTextEquals({ element: '@flashError', text: 'As passwords não são iguais.' });
 
 		browser.adminUIItemScreen.fillFieldInputs({
 			fields: [
