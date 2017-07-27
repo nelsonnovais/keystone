@@ -1,5 +1,8 @@
 import React from 'react';
 import evalDependsOn from '../../../../../../fields/utils/evalDependsOn';
+const lookUpTable = {
+	'Permissions': 'Permissões',
+};
 
 module.exports = React.createClass({
 	displayName: 'FormHeading',
@@ -10,7 +13,6 @@ module.exports = React.createClass({
 		if (!evalDependsOn(this.props.options.dependsOn, this.props.options.values)) {
 			return null;
 		}
-		console.log(this.props.content);
-		return <h3 className="form-heading">{this.props.content}</h3>;
+		return <h3 className="form-heading">{lookUpTable[this.props.content] !== undefined ? lookUpTable[this.props.content] : this.props.content}</h3>;
 	},
 });
