@@ -27,7 +27,7 @@ const lookUpTable = {
 	'Enquiries': 'Requerimentos',
 	'Posts': 'Posts',
 	'Users': 'Utilizadores',
-	'Name:': 'Nome',
+	'Name': 'Nome',
 	'Email': 'Email',
 	'Can access Keystone': 'Previlegios de Administrador',
 	'Title': 'Título',
@@ -81,8 +81,7 @@ var TextFilter = React.createClass({
 	render () {
 		const { field, filter } = this.props;
 		const mode = MODE_OPTIONS.filter(i => i.value === filter.mode)[0];
-		console.log(field.label);
-		const placeholder = lookUpTable[field.label.trim()] !== undefined ? lookUpTable[field.label] : field.label + ' ' + mode.label.toLowerCase() + '...';
+		const placeholder = lookUpTable[field.label] !== undefined ? lookUpTable[field.label] : field.label + ' ' + mode.label.toLowerCase() + '...';
 		return (
 			<div>
 				<FormField>
