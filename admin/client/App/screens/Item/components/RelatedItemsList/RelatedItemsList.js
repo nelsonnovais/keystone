@@ -105,7 +105,6 @@ const RelatedItemsList = React.createClass({
 	},
 	renderTableCols () {
 		const cols = this.state.columns.map((col) => <col width={col.width} key={col.path} />);
-		console.log('cols: ' + cols.label);
 		return <colgroup>{cols}</colgroup>;
 	},
 	renderTableHeaders () {
@@ -119,6 +118,7 @@ const RelatedItemsList = React.createClass({
 				<th width={TABLE_CONTROL_COLUMN_WIDTH} key="sortable" />
 			);
 		}
+		console.log('cells' + cells);
 		return <thead><tr>{cells}</tr></thead>;
 	},
 	render () {
