@@ -71,7 +71,7 @@ module.exports = Field.create({
 						autoComplete="off"
 						name={this.getInputName(paths.first)}
 						onChange={this.changeFirst}
-						placeholder="First name"
+						placeholder="Primeiro Nome"
 						value={value.first}
 					/>
 				</Grid.Col>
@@ -80,7 +80,7 @@ module.exports = Field.create({
 						autoComplete="off"
 						name={this.getInputName(paths.last)}
 						onChange={this.changeLast}
-						placeholder="Last name"
+						placeholder="Ultimo Nome"
 						value={value.last}
 					/>
 				</Grid.Col>

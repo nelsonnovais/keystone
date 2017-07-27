@@ -57,7 +57,7 @@ module.exports = Field.create({
 						autoComplete="off"
 						name={this.getInputName(this.props.path)}
 						onChange={this.valueChanged.bind(this, 'password')}
-						placeholder="New password"
+						placeholder="Nova password"
 						ref="focusTarget"
 						type="password"
 						value={this.state.password}
@@ -68,7 +68,7 @@ module.exports = Field.create({
 						autoComplete="off"
 						name={this.getInputName(this.props.paths.confirm)}
 						onChange={this.valueChanged.bind(this, 'confirm')}
-						placeholder="Confirm new password" value={this.state.confirm}
+						placeholder="Confirmar password" value={this.state.confirm}
 						type="password"
 					/>
 				</Section>
