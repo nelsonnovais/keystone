@@ -24,11 +24,9 @@ class RelatedItemsListRow extends Component {
 		if (connectDragSource) {
 			cells.unshift(<ListControl key="_sort" type="sortable" dragSource={connectDragSource} />);
 		}
-		console.log('cells' + cells);
 		const row = (<tr key={'i' + item.id}>{cells}</tr>);
 
 		if (connectDropTarget) {
-			console.log('row' + row);
 			return connectDropTarget(row);
 		} else {
 			return row;

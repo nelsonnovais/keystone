@@ -74,7 +74,7 @@ module.exports = Field.create({
 				</Section>
 				{this.state.passwordIsSet ? (
 					<Section>
-						<Button onClick={this.onCancel}>Cancel</Button>
+						<Button onClick={this.onCancel}>Cancelar</Button>
 					</Section>
 				) : null}
 			</Group>
@@ -83,8 +83,8 @@ module.exports = Field.create({
 
 	renderChangeButton () {
 		var label = this.state.passwordIsSet
-			? 'Change Password'
-			: 'Set Password';
+			? 'Alterar Password'
+			: 'Definir Password';
 
 		return (
 			<Button ref="focusTarget" onClick={this.showChangeUI}>{label}</Button>
