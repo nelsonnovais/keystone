@@ -47,6 +47,15 @@ import {
 
 const ESC_KEY_CODE = 27;
 
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Users': 'Utilizador',
+	'Post': 'Post',
+	'Posts': 'Posts',
+	'Post Category': 'Categoria',
+	'Post Categories': 'Categorias',
+};
+
 const ListView = React.createClass({
 	contextTypes: {
 		router: React.PropTypes.object.isRequired,
@@ -219,15 +228,14 @@ const ListView = React.createClass({
 		const list = this.props.currentList;
 		const currentPage = this.props.lists.page.index;
 		const pageSize = this.props.lists.page.size;
-		console.log('plurar:' + list.plural);
-		console.log('singular' + list.singular);
+
 		return (
 			<Pagination
 				currentPage={currentPage}
 				onPageSelect={this.handlePageSelect}
 				pageSize={pageSize}
-				plural={list.plural}
-				singular={list.singular}
+				plural={lookUpTable[list.plural]}
+				singular={lookUpTable[list.singular]}
 				style={{ marginBottom: 0 }}
 				total={items.count}
 				limit={10}
