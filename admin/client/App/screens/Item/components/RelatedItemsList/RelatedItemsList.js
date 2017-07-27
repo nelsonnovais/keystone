@@ -118,7 +118,6 @@ const RelatedItemsList = React.createClass({
 				<th width={TABLE_CONTROL_COLUMN_WIDTH} key="sortable" />
 			);
 		}
-		console.log('cells' + cells);
 		return <thead><tr>{cells}</tr></thead>;
 	},
 	render () {
