@@ -3,6 +3,13 @@ import React, { Component, PropTypes } from 'react';
 import Page from './page';
 import theme from '../../../theme';
 
+const lookUptable = {
+	'Post': 'Post',
+	'Post Categories': 'Categoria(s)',
+	'User': 'Utilizador(es)',
+	'Users': 'Utilizadores',
+};
+
 class Pagination extends Component {
 	renderCount () {
 		let count = '';
@@ -12,9 +19,9 @@ class Pagination extends Component {
 		} else if (total > pageSize) {
 			let start = (pageSize * (currentPage - 1)) + 1;
 			let end = Math.min(start + pageSize - 1, total);
-			count = `Apresentando ${start} to ${end} of ${total}`;
+			count = `Apresentando ${start} :${end} de ${lookUptable[total]}`;
 		} else {
-			count = 'Apresentando ' + total;
+			count = 'Apresentando ' + lookUptable[total];
 			if (total > 1 && plural) {
 				count += ' ' + plural;
 			} else if (total === 1 && singular) {
