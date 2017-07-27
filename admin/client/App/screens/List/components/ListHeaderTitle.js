@@ -12,9 +12,10 @@ function ListHeaderTitle ({
 	...props
 }) {
 	var titulo = '';
+	var trimField = '';
 	const field = title.split(' ');
 	titulo = field[0] + ' ' + field[1];
-	console.log('ei:' + field[1] + '2');
+	console.log('ei:' + field[1].trim() + '2');
 	if (field[2] !== undefined) {
 		titulo = field[0] + ' Categorias';
 	};
