@@ -64,6 +64,7 @@ export const EditFormHeader = React.createClass({
 
 		// return a single back button when no drilldown exists
 		if (!items.length) {
+			console.log(list.plurar);
 			return (
 				<GlyphButton
 					component={Link}

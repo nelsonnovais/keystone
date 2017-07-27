@@ -515,7 +515,7 @@ const ListView = React.createClass({
 					style={{ marginBottom: 20 }}
 				/>
 				<h2 style={{ color: 'inherit' }}>
-					Nenhum post encontrado
+					Procura sem resultados
 				</h2>
 			</BlankState>
 		);
