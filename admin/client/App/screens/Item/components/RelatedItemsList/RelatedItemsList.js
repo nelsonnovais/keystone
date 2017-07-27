@@ -99,10 +99,12 @@ const RelatedItemsList = React.createClass({
 	},
 	renderTableCols () {
 		const cols = this.state.columns.map((col) => <col width={col.width} key={col.path} />);
+		console.log(cols);
 		return <colgroup>{cols}</colgroup>;
 	},
 	renderTableHeaders () {
 		const cells = this.state.columns.map((col) => {
+			console.log('label' + col.label);
 			return <th key={col.path}>{col.label}</th>;
 		});
 
