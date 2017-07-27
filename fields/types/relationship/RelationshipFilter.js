@@ -24,7 +24,7 @@ const lookUpTable = {
 	'Enquiries': 'Requerimentos',
 	'Posts': 'Posts',
 	'Users': 'Utilizadores',
-	'Name:': 'Nome',
+	'Name': 'Nome',
 	'Email': 'Email',
 	'Can access Keystone': 'Previlegios de Administrador',
 	'Title': 'Título',
