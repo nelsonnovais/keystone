@@ -177,7 +177,6 @@ var RelationshipFilter = React.createClass({
 		const itemIconHover = selected ? 'x' : 'check';
 
 		return items.map((item, i) => {
-			console.log('Item: ' + item.name);
 			return (
 				<PopoutList.Item
 					key={`item-${i}-${item.id}`}
