@@ -49,7 +49,7 @@ const ItemsTable = React.createClass({
 				<col width={TABLE_CONTROL_COLUMN_WIDTH} key="sortable" />
 			);
 		}
-
+		console.log('cols2: ' + cols);
 		return (
 			<colgroup>
 				{cols}
