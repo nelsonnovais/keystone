@@ -118,7 +118,7 @@ const RelatedItemsList = React.createClass({
 				<th width={TABLE_CONTROL_COLUMN_WIDTH} key="sortable" />
 			);
 		}
-
+		console.log(cells);
 		return <thead><tr>{cells}</tr></thead>;
 	},
 	render () {
@@ -132,7 +132,6 @@ const RelatedItemsList = React.createClass({
 				<Spinner />
 			</Center>
 		);
-		console.log(this.props.refList.label);
 		return (
 			<div className="Relationship">
 				<h3 className="Relationship__link"><Link to={listHref}>{this.props.refList.label}</Link></h3>
