@@ -12,8 +12,11 @@ import { GlyphButton, ResponsiveText } from '../../../elemental';
 
 const lookUpTable = {
 	'Post': 'Post',
+	'Posts': 'Posts',
 	'Post Category': 'Categoria',
+	'Post Categories': 'Categorias',
 	'User': 'Utilizador',
+	'Users': 'Utilizadores',
 };
 
 export const EditFormHeader = React.createClass({
@@ -64,7 +67,6 @@ export const EditFormHeader = React.createClass({
 
 		// return a single back button when no drilldown exists
 		if (!items.length) {
-			console.log(list.plural);
 			return (
 				<GlyphButton
 					component={Link}
@@ -75,7 +77,7 @@ export const EditFormHeader = React.createClass({
 					to={backPath}
 					variant="link"
 					>
-					{list.plural}
+					{lookUpTable[list.plural] !== undefined ? lookUpTable[list.plural] : list.plural}
 				</GlyphButton>
 			);
 		}
