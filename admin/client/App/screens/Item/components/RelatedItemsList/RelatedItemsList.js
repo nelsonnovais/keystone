@@ -62,7 +62,7 @@ const RelatedItemsList = React.createClass({
 		if (!refList.fields[relationship.refPath]) {
 			const err = (
 				<Alert color="danger">
-					<strong>Error:</strong> Related List <strong>{refList.label}</strong> has no field <strong>{relationship.refPath}</strong>
+					<strong>Error:</strong> Label: <strong>{refList.label}</strong> sem relação <strong>{relationship.refPath}</strong>
 				</Alert>
 			);
 			return this.setState({ err });
@@ -79,7 +79,7 @@ const RelatedItemsList = React.createClass({
 		) : (
 			<tbody>
 				{this.props.items.results.map((item) => {
-					console.log(item);
+					console.log(this.state.columns);
 					return (<ListRow
 						key={item.id}
 						columns={this.state.columns}
