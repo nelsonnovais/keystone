@@ -17,6 +17,12 @@ function ListHeaderTitle ({
 	if (field[2] !== undefined) {
 		titulo = field[0] + ' Categorias';
 	};
+	if (field[1] === 'User') {
+		titulo = field[0] + 'Utilizador';
+	};
+	if (field[1] === 'Users') {
+		titulo = field[0] + 'Utilizadores';
+	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
 			{titulo}
