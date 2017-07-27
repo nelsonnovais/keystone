@@ -37,7 +37,6 @@ module.exports = Field.create({
 	},
 	renderUI () {
 		const { indent, value, label, path } = this.props;
-		console.log('label' + label);
 		return (
 			<div data-field-name={path} data-field-type="boolean">
 				<FormField offsetAbsentLabel={indent}>
@@ -49,7 +48,7 @@ module.exports = Field.create({
 							readonly={!this.shouldRenderField()}
 						/>
 						<span style={{ marginLeft: '.75em' }}>
-							{label}
+							{label === 'Can access Keystone' ? 'Previlégios de Administrador' : label}
 						</span>
 					</label>
 					{this.renderNote()}
