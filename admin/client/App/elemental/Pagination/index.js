@@ -7,7 +7,7 @@ const lookUptable = {
 	'Post': 'Post',
 	'Post Categories': 'Categoria(s)',
 	'User': 'Utilizador(es)',
-	'Users': 'Utilizadores',
+	'Users': '	Utilizadores',
 };
 
 class Pagination extends Component {
