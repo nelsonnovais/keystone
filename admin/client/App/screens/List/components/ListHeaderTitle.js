@@ -18,8 +18,8 @@ function ListHeaderTitle ({
 }) {
 	var titulo = '';
 	const field = title.split(' ');
-	titulo = field[0] + ' ' + lookUpTable[field[1]];
-	console.log(field);
+	console.log(field[1]);
+	titulo = field[0] + ' ' + field[1];
 	if (field[2] !== undefined) {
 		titulo = field[0] + ' Categorias';
 	};
