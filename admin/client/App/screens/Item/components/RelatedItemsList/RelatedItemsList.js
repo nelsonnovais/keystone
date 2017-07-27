@@ -79,7 +79,6 @@ const RelatedItemsList = React.createClass({
 		) : (
 			<tbody>
 				{this.props.items.results.map((item) => {
-					console.log(this.state.columns);
 					return (<ListRow
 						key={item.id}
 						columns={this.state.columns}
