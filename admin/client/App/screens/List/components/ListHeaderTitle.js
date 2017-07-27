@@ -4,6 +4,11 @@ import theme from '../../../../theme';
 
 import ListSort from './ListSort';
 
+const lookUpTable = {
+	'User': 'Utilizador',
+	'Users': 'Utilizadores',
+};
+
 function ListHeaderTitle ({
 	activeSort,
 	availableColumns,
@@ -13,16 +18,10 @@ function ListHeaderTitle ({
 }) {
 	var titulo = '';
 	const field = title.split(' ');
-	titulo = field[0] + ' ' + field[1];
+	titulo = field[0] + ' ' + lookUpTable[field[1]];
 	console.log(field);
 	if (field[2] !== undefined) {
 		titulo = field[0] + ' Categorias';
-	};
-	if (field[1] === 'User') {
-		titulo = field[0] + 'Utilizador';
-	};
-	if (field[1] === 'Users') {
-		titulo = field[0] + 'Utilizadores';
 	};
 	return (
 		<h2 className={css(classes.heading)} {...props}>
