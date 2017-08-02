@@ -21,7 +21,6 @@ function ItemsTableValue ({
 	}
 	const linkRef = to || href;
 	const Component = linkRef ? Link : component;
-	console.log('field:' + field);
 	props.className = classnames('ItemList__value', (
 		field ? `ItemList__value--${field}` : null
 	), {
