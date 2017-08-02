@@ -10,7 +10,7 @@ var LocalFilesColumn = React.createClass({
 	render: function () {
 		return (
 			<td className="ItemList__col">
-				<div className="ItemList__value ItemList__value--local-files">{this.renderValue()}lol</div>
+				<div className="ItemList__value ItemList__value--local-files">{this.renderValue()}</div>
 			</td>
 		);
 	},
