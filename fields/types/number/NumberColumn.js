@@ -14,7 +14,7 @@ var NumberColumn = React.createClass({
 		if (!value || isNaN(value)) return null;
 
 		const formattedValue = (this.props.col.path === 'money') ? numeral(value).format('$0,0.00') : value;
-
+		console.log('this value6:' + formattedValue);
 		return formattedValue;
 	},
 	render () {

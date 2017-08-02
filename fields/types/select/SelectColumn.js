@@ -18,6 +18,7 @@ var SelectColumn = React.createClass({
 	render () {
 		const value = this.getValue();
 		const empty = !value && this.props.linkTo ? true : false;
+		console.log('this value7:' + value);
 		return (
 			<ItemsTableCell>
 				<ItemsTableValue field={this.props.col.type} to={this.props.linkTo} empty={empty}>

@@ -42,7 +42,6 @@ var RelationshipColumn = React.createClass({
 	renderValue (value) {
 		if (!value) return;
 		const refList = this.props.col.field.refList;
-		console.log('may:' + value.name);
 		return (
 			<ItemsTableValue to={Keystone.adminPath + '/' + refList.path + '/' + value.id} padded interior field={this.props.col.type}>
 				{value.name}

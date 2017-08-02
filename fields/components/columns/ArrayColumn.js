@@ -11,7 +11,7 @@ var ArrayColumn = React.createClass({
 	renderValue () {
 		const value = this.props.data.fields[this.props.col.path];
 		if (!value || !value.length) return null;
-
+		console.log('this value1:' + value);
 		return value.join(', ');
 	},
 	render () {
