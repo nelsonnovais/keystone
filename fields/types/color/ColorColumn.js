@@ -21,7 +21,6 @@ var ColorColumn = React.createClass({
 			verticalAlign: 'middle',
 			width: 18,
 		};
-		console.log('this value' + value);
 		return (
 			<ItemsTableValue truncate={false} field={this.props.col.type}>
 				<div style={{ lineHeight: '18px' }}>
