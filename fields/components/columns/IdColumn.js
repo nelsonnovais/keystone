@@ -12,7 +12,7 @@ var IdColumn = React.createClass({
 	renderValue () {
 		const value = this.props.data.id;
 		if (!value) return null;
-
+		console.log('this value' + value);
 		return (
 			<ItemsTableValue padded interior title={value} to={Keystone.adminPath + '/' + this.props.list.path + '/' + value} field={this.props.col.type}>
 				{value}
