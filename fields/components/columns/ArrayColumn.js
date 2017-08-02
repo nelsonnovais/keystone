@@ -15,6 +15,7 @@ var ArrayColumn = React.createClass({
 		return value.join(', ');
 	},
 	render () {
+		console.log('this render table value: ' + this.renderValue);
 		return (
 			<ItemsTableCell>
 				<ItemsTableValue field={this.props.col.type}>
