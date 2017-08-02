@@ -20,7 +20,6 @@ var UrlColumn = React.createClass({
 
 		// strip the protocol from the link if it's http(s)
 		var label = value.replace(/^https?\:\/\//i, '');
-		console.log('this url:' + value);
 		return (
 			<ItemsTableValue to={href} padded exterior field={this.props.col.type}>
 				{label}

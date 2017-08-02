@@ -11,7 +11,6 @@ var EmailColumn = React.createClass({
 	renderValue () {
 		const value = this.props.data.fields[this.props.col.path];
 		if (!value) return;
-		console.log('this value4:' + value);
 		return (
 			<ItemsTableValue to={'mailto:' + value} padded exterior field={this.props.col.type}>
 				{value}

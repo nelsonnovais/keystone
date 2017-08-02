@@ -2,6 +2,12 @@ import React from 'react';
 import ItemsTableCell from '../../components/ItemsTableCell';
 import ItemsTableValue from '../../components/ItemsTableValue';
 
+const lookUpTable = {
+	'Draft': 'Rascunho',
+	'Published': 'Publicado',
+	'Archived': 'Arquivado',
+};
+
 var SelectColumn = React.createClass({
 	displayName: 'SelectColumn',
 	propTypes: {
@@ -22,7 +28,7 @@ var SelectColumn = React.createClass({
 		return (
 			<ItemsTableCell>
 				<ItemsTableValue field={this.props.col.type} to={this.props.linkTo} empty={empty}>
-					{value}
+					{lookUpTable[value] !== undefined ? lookUpTable[value] : value}
 				</ItemsTableValue>
 			</ItemsTableCell>
 		);

@@ -13,7 +13,6 @@ var LocalFileColumn = React.createClass({
 		var value = this.props.data.fields[this.props.col.path];
 		var href = value && value.url ? value.url : null;
 		var label = value && value.filename ? value.filename : null;
-		console.log('this label:' + label);
 		return (
 			<ItemsTableCell href={href} padded interior field={this.props.col.type}>
 				<ItemsTableValue>{label}</ItemsTableValue>
