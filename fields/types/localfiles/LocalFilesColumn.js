@@ -5,6 +5,7 @@ var LocalFilesColumn = React.createClass({
 		var value = this.props.data.fields[this.props.col.path];
 		if (value.length === 0) return '';
 		var fileOrFiles = (value.length > 1) ? 'Files' : 'File';
+		console.log(value.length + ' ' + fileOrFiles);
 		return value.length + ' ' + fileOrFiles;
 	},
 	render: function () {

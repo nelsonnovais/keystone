@@ -98,7 +98,7 @@ const RelatedItemsList = React.createClass({
 			</div>
 		) : (
 			<BlankState
-				heading={`No related ${this.props.refList.plural.toLowerCase()}...`}
+				heading={`Não existem ${this.props.refList.plural.toLowerCase()} relacionados...`}
 				style={{ marginBottom: '3em' }}
 			/>
 		);
