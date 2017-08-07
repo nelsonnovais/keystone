@@ -67,7 +67,7 @@ class Filter extends Component {
 		return (
 			<span>
 				<Chip
-					label={lookUpTable[getFilterLabel(filter.field, filter.value)]}
+					label={lookUpTable[getFilterLabel(filter.field, filter.value)] !== undefined ? lookUpTable[getFilterLabel(filter.field, filter.value)] : getFilterLabel(filter.field, filter.value)}
 					onClick={this.open}
 					onClear={this.removeFilter}
 					color="primary"

@@ -35,7 +35,7 @@ const SecondaryNavItem = React.createClass({
 					title={this.props.title}
 					tabIndex="-1"
 				>
-					{lookUpTable[this.props.children]}
+					{lookUpTable[this.props.children] !== undefined ? lookUpTable[this.props.children] : this.props.children}
 				</Link>
 			</li>
 		);

@@ -100,7 +100,7 @@ var ListSort = React.createClass({
 					key={'column_' + el.field.path}
 					icon={icon}
 					isSelected={isSelected}
-					label={lookUpTable[el.field.label]}
+					label={lookUpTable[el.field.label] !== undefined ? lookUpTable[el.field.label] : el.field.label}
 					onClick={() => {
 						this.handleSortSelect(path, isSelected && !isInverted);
 					}} />
@@ -132,7 +132,7 @@ var ListSort = React.createClass({
 					<span>
 						<span style={{ color: '#999' }}> disposto(s) por </span>
 						<a id="listHeaderSortButton" href="javascript:;" onClick={this.openPopout}>
-							{lookUpTable[activeSortPath.label].toLowerCase()}
+							{lookUpTable[activeSortPath.label].toLowerCase() !== undefined ? lookUpTable[activeSortPath.label].toLowerCase() : [activeSortPath.label].toLowerCase()}
 							{activeSortPath.invert ? ' (descendente)' : ''}
 							<span className="disclosure-arrow" />
 						</a>

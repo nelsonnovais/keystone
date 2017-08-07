@@ -19,7 +19,7 @@ class Section extends React.Component {
 			<div className="dashboard-group" data-section-label={this.props.label}>
 				<div className="dashboard-group__heading">
 					<span className={`dashboard-group__heading-icon ${iconClass}`} />
-					{lookUpTable[this.props.label]}
+					{lookUpTable[this.props.label] !== undefined ? lookUpTable[this.props.label] : this.props.label}
 				</div>
 				{this.props.children}
 			</div>

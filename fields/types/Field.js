@@ -102,7 +102,7 @@ var Base = module.exports.Base = {
 			{ 'field-monospace': this.props.monospace }
 		);
 		return (
-			<FormField htmlFor={this.props.path} label={lookUpTable[this.props.label]} className={wrapperClassName} cropLabel>
+			<FormField htmlFor={this.props.path} label={lookUpTable[this.props.label] !== undefined ? lookUpTable[this.props.label] : this.props.label} className={wrapperClassName} cropLabel>
 				<div className={'FormField__inner field-size-' + this.props.size}>
 					{this.shouldRenderField() ? this.renderField() : this.renderValue()}
 				</div>

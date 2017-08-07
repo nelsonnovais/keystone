@@ -38,13 +38,13 @@ function CreateButton ({ listName, onClick, ...props }) {
 			glyph="plus"
 			onClick={onClick}
 			position="left"
-			title={`Adicionar ${lookUpTable[listName]}`}
+			title={`Adicionar ${lookUpTable[listName] !== undefined ? lookUpTable[listName] : listName}`}
 			{...props}
 		>
 			<ResponsiveText
 				visibleSM="Create"
 				visibleMD="Create"
-				visibleLG={`Adicionar ${lookUpTable[listName]}`}
+				visibleLG={`Adicionar ${lookUpTable[listName] !== undefined ? lookUpTable[listName] : listName}`}
 			/>
 		</GlyphButton>
 	);

@@ -196,7 +196,7 @@ var RelationshipFilter = React.createClass({
 		const searchResults = this.state.searchResults.filter(i => {
 			return this.props.filter.value.indexOf(i.id) === -1;
 		});
-		const placeholder = this.isLoading() ? 'A carregar...' : 'Encontre a(s) ' + lookUpTable[this.props.field.label] + '...';
+		const placeholder = this.isLoading() ? 'A carregar...' : 'Encontre a(s) ' + lookUpTable[this.props.field.label] !== undefined ? lookUpTable[this.props.field.label] : this.props.field.label + '...';
 		return (
 			<div ref="container">
 				<FormField>

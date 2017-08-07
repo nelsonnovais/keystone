@@ -152,7 +152,7 @@ export const EditFormHeader = React.createClass({
 		}
 		return (
 			<GlyphButton data-e2e-item-create-button="true" color="success" glyph="plus" position="left" {...props}>
-				<ResponsiveText hiddenXS={`Adicionar ${lookUpTable[singular]}`} visibleXS="Create" />
+				<ResponsiveText hiddenXS={`Adicionar ${lookUpTable[singular] !== undefined ? lookUpTable[singular] : singular}`} visibleXS="Create" />
 			</GlyphButton>
 		);
 	},

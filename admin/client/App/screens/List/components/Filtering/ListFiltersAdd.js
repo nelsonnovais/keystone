@@ -108,7 +108,7 @@ var ListFiltersAdd = React.createClass({
 					icon={filterIsActive ? 'check' : 'chevron-right'}
 					iconHover={filterIsActive ? 'check' : 'chevron-right'}
 					isSelected={!!filterIsActive}
-					label={lookUpTable[el.field.label]}
+					label={lookUpTable[el.field.label] !== undefined ? lookUpTable[el.field.label] : el.field.label}
 					onClick={() => { this.selectField(el.field); }} />
 			);
 		});

@@ -27,7 +27,7 @@ function ModalHeader ({
 			<div className={css(classes.grow)}>
 				{text ? (
 					<h4 className={css(classes.text)}>
-						{lookUpTable[text]}
+						{lookUpTable[text] !== undefined ? lookUpTable[text] : text}
 					</h4>
 				) : children}
 			</div>

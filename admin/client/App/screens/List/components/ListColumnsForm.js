@@ -88,7 +88,7 @@ var ListColumnsForm = React.createClass({
 					icon={selected ? 'check' : 'dash'}
 					iconHover={selected ? 'dash' : 'check'}
 					isSelected={!!selected}
-					label={lookUpTable[el.field.label]}
+					label={lookUpTable[el.field.label] !== undefined ? lookUpTable[el.field.label] : el.field.label}
 					onClick={() => { this.toggleColumn(path, !selected); }} />
 			);
 		});

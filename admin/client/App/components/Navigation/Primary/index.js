@@ -113,7 +113,7 @@ var PrimaryNavigation = React.createClass({
 					className={className}
 					to={href}
 				>
-					{lookUpTable[section.label]}
+					{lookUpTable[section.label] !== undefined ? lookUpTable[section.label] : section.label}
 				</PrimaryNavItem>
 			);
 		});

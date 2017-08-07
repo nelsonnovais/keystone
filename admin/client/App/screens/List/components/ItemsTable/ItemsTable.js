@@ -89,7 +89,7 @@ const ItemsTable = React.createClass({
 							);
 						}}
 						title={buttonTitle}>
-						{lookUpTable[col.label]}
+						{lookUpTable[col.label] !== undefined ? lookUpTable[col.label] : col.label}
 						<span className="th-sort__icon" />
 					</button>
 				</th>

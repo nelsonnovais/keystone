@@ -234,8 +234,8 @@ const ListView = React.createClass({
 				currentPage={currentPage}
 				onPageSelect={this.handlePageSelect}
 				pageSize={pageSize}
-				plural={lookUpTable[list.plural]}
-				singular={lookUpTable[list.singular]}
+				plural={lookUpTable[list.plural] !== undefined ? lookUpTable[list.plural] : list.plural}
+				singular={lookUpTable[list.singular] !== undefined ? lookUpTable[list.singular] : list.singular}
 				style={{ marginBottom: 0 }}
 				total={items.count}
 				limit={10}

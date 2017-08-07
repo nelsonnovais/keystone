@@ -109,7 +109,7 @@ const RelatedItemsList = React.createClass({
 	},
 	renderTableHeaders () {
 		const cells = this.state.columns.map((col) => {
-			return <th key={col.path}>{lookUpTable[col.label]}</th>;
+			return <th key={col.path}>{lookUpTable[col.label] !== undefined ? lookUpTable[col.label] : col.label}</th>;
 		});
 
 		// add sort col when available
