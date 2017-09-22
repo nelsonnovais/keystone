@@ -20,7 +20,7 @@ describe('<Footer />', () => {
 		const component = shallow(
 			<Footer />
 		);
-		demand(component.find('a[href="http://keystonejs.com"]').length).eql(1);
+		demand(component.find('a[href="https://mosano.eu"]').length).eql(1);
 	});
 
 	describe('this.props', () => {

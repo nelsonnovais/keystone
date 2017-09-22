@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+var lookUpTalbe = {
+	'Other' : 'Control Panel',
+};
+
 /**
  * Displays information about a list and lets you create a new one.
  */

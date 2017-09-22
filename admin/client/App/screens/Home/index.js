@@ -59,6 +59,16 @@ var HomeView = React.createClass({
 						/>
 					) : (
 						<div>
+							{/* Render orphaned lists */}
+							{Keystone.orphanedLists.length ? (
+								<Section label="Other" icon="octicon-database">
+									<Lists
+										counts={this.props.counts}
+										lists={Keystone.orphanedLists}
+										spinner={spinner}
+									/>
+								</Section>
+							) : null}
 							{/* Render nav with sections */}
 							{Keystone.nav.sections.map((navSection) => {
 								return (
@@ -71,16 +81,6 @@ var HomeView = React.createClass({
 									</Section>
 								);
 							})}
-							{/* Render orphaned lists */}
-							{Keystone.orphanedLists.length ? (
-								<Section label="Other" icon="octicon-database">
-									<Lists
-										counts={this.props.counts}
-										lists={Keystone.orphanedLists}
-										spinner={spinner}
-									/>
-								</Section>
-							) : null}
 						</div>
 					)}
 				</div>
